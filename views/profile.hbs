@@ -3,10 +3,25 @@
   <nav>
     <ul>
       <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 9vh;"></li>
-      <li class="menu"><a href="#" class="profileLogout">Logout</a></li>
+      <li class="menu"><a href="/logout" class="profileLogout">Logout</a></li>
     </ul>
   </nav>
 </header>
+
+{{#each user as |profile|}}
+<p>{{profile.name}}</p>
+<p>{{profile.username}}</p>
+<p>{{profile.age}}</p>
+<p>{{profile.currentJob}}</p>
+<hr>
+<a href="{{profile.twitter}}">{{profile.twitter}}</a>
+<a>{{profile.linkedin}}</a>
+<p>{{profile.github}}</p>
+<p>{{profile.facebook}}</p>
+<p>{{profile.codewars}}</p>
+<p>{{profile.instagram}}</p>
+
+{{/each}}
 
 
 <div class="hex" style="background-image: url(https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg);">		
@@ -15,9 +30,4 @@
 	<div class="corner-2"></div>		
 </div>
 
-{{#each user as |profile|}}
-<p>Name: {{profile.name}}</p>
-<p>Username: {{profile.username}}</p>
-<p>Age: {{profile.age}}</p>
-<p>Current Job: {{profile.currentJob}}</p>
-{{/each}}
+<a href="/editProfile/{{user._id}}">Edit profile</a>
