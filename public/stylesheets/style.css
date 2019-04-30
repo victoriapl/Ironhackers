@@ -37,7 +37,8 @@
   font-family: Yanone kaffeesatz;
   color: white; }
 
-.loginForm {
+.loginForm,
+.signForm {
   margin-top: 245px; }
 
 .loginInput,
@@ -54,7 +55,7 @@
   position: absolute;
   margin-top: 100px;
   padding: 10px 0 10px 0;
-  width: 230px;
+  width: 180px;
   background: #257ab9;
   border: 10px;
   border-radius: 5px;
@@ -65,7 +66,7 @@
   position: absolute;
   margin-top: 60px;
   padding: 10px 0 10px 0;
-  width: 230px;
+  width: 180px;
   background: #257ab9;
   border: 10px;
   border-radius: 5px;
@@ -86,18 +87,18 @@
 
 nav {
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   background: grey; }
 
 ul {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-content: center; }
 
 li {
-  display: inline;
-  margin-left: 10px;
+  display: flex;
   color: white;
-  margin: 4px 30px 0 30px; }
+  margin: 1.5vh 2.5vw 1.5vh 1vw; }
 
 img {
   display: flex;
@@ -107,18 +108,41 @@ img {
   color: white;
   font-family: Yanone Kaffeesatz; }
 
+#profileUsername {
+  font-family: Yanone Kaffeesatz;
+  margin: 0 3% 7% 10%;
+  font-size: 2.5rem; }
+
+.profileContainer {
+  width: 16vw; }
+
+.dataContent {
+  text-align: center;
+  width: 15vw;
+  height: 25vh;
+  margin: 0 3% 0 10%; }
+
+.socialMedia {
+  width: 5vw;
+  height: 90vh; }
+
+.smLogos {
+  display: flex;
+  margin: 5% 1% 5% 15%;
+  width: 59%; }
+
 .hex {
   width: 150px;
   height: 86px;
   background-color: #ccc;
   background-repeat: repeat;
   background-position: 50% 50%;
-  background-size: contain;
+  background-size: 200px;
   position: relative;
   float: center;
-  margin: 70px 35px;
+  margin: 40% 5% 35% 10%;
   text-align: center;
-  zoom: 2; }
+  zoom: 1.5; }
 
 .hex.hex-gap {
   margin-left: 86px; }
@@ -131,7 +155,7 @@ img {
   width: 100%;
   height: 100%;
   background: inherit;
-  z-index: -2;
+  z-index: 0;
   overflow: hidden;
   backface-visibility: hidden; }
 
