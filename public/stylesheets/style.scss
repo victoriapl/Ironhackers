@@ -139,20 +139,61 @@ img{
   font-family: Yanone Kaffeesatz;
 }
 
-///hexagon pic configuration
+#profileUsername{
+  font-family: Yanone Kaffeesatz;
+  margin: 0 3% 7% 10%;
+  font-size: 2.5rem;
+}
+
+.profileContainer{
+  width: 16vw;
+  //border: 1px solid black
+  //color: white;
+
+}
+
+//.profileImg{
+  //width: 200px;
+  //margin: 5vh 3vw 2vh 3vw;
+  //border: 3px solid white;
+//}
+
+.dataContent{
+  //border: 1px solid black;
+  text-align: center;
+  width: 15vw;
+  height: 25vh;
+  margin: 0 3% 0 10%;
+}
+
+.socialMedia{
+  width: 5vw;
+  height: 90vh;
+  //border: 1px solid black;
+}
+
+.smLogos{
+  display: flex;
+  //border: 1px solid black;
+  margin: 5% 1% 5% 15%;
+  //justify-content: space-evenly;
+  width: 59%;
+}
+
+////////////HEX
 .hex {
   width:150px;
   height:86px;
   background-color: #ccc;
   background-repeat: repeat;
   background-position: 50% 50%;                   
-  background-size: contain;                                                    
+  background-size: 200px;                                                    
   position: relative;
   float:center;
-  margin:70px 35px;
+  margin:40% 5% 35% 10%;
   text-align:center;
-  
-  zoom:2;
+    
+  zoom:1.5;
 }
 
 .hex.hex-gap {
@@ -168,8 +209,8 @@ img{
   height:100%;
   background: inherit;
 
-  z-index:-2;                                            
- 
+  z-index:0;                                            
+
   overflow:hidden;                
   backface-visibility: hidden;                    
 }
@@ -202,12 +243,10 @@ img{
   transform: rotate(-60deg) translate(-87px, 0px);        
   transform-origin: 0 0;
 }                       
-
 .hex .corner-2:before {
   transform: rotate(60deg) translate(-48px, -11px);       
   bottom:0;
-}           
-
+}         
 
 /////////// ANIMATIONS
 .logo-animation {

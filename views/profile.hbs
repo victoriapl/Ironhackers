@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul>
-      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 4vh;"></li>
+      <li class="menu"><a href="#"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 4vh;"></li></a>
       <li class="menu"><a href="/logout" class="profileLogout" style="font-size: 2rem;">LOGOUT</a></li>
     </ul>
   </nav>
@@ -9,40 +9,75 @@
 
 </header>
 
-<h2>Welcome to your profile</h2>
 
-<div>
-{{#each user as |profile|}}
-<img src="{{!-- {{profile.profileImg}} --}}" width="200">
-<br>
-<span>{{profile.name}}</span>
+<section class="d-flex flex-row">
 
-<p>{{profile.username}}</p>
-<p>{{profile.age}}</p>
-<a href="{{profile.twitter}}">{{profile.twitter}}</a>
-<a href="{{profile.linkedin}}">{{profile.linkedin}}</a>
-<a href="{{profile.github}}">{{profile.github}}</a>
-<a href="{{profile.facebook}}">{{profile.facebook}}</a>
-<a href="{{profile.codewars}}">{{profile.codewars}}</a>
-<a href="{{profile.instagram}}">{{profile.instagram}}</a>
-<form>
-  <a href="{{profile.project1}}">{{profile.project1}}</a>
-  <a href="{{profile.project2}}">{{profile.project2}}</a>
-  <a href="{{profile.project3}}">{{profile.project3}}</a>
-</form>
-{{/each}}
-</div>
+<aside class="profileContainer">
 
-<a href="/eduRes">Educative Resources</a>
-<a href="/profiles">Ironhackers</a>
+  <section class="d-flex flex-column justify-content-between align-items-center ">
 
- <a href="/logout">Logout</a>
-
-{{!-- <div class="hex" style="background-image: url(https://content-static.upwork.com/uploads/2014/10/01073427/profilephoto1.jpg);">		
+  <div>
+{{!-- <img src="{{user.profileImg}}" class="profileImg"> --}}
+<div class="hex" style="background-image: url({{user.profileImg}});">		
 		
 	<div class="corner-1"></div>
 	<div class="corner-2"></div>		
-</div> --}}
+</div>
+
+<hr>
+
 <br>
-<a href="/editProfile/{{user._id}}">Edit profile</a>
+<h1 id="profileUsername">Welcome, {{user.username}}</h1>
+  </div>
+
+
+<div class="dataContent d-flex flex-column justify-content-center align-items-center">
+<p><strong>Complete name: </strong>{{user.name}}</p>
+<p><strong>e-mail: </strong>{{user.email}}</p>
+<p><strong>Age: </strong>{{user.age}}</p>
+<p><strong>Current Job: </strong>{{user.currentJob}}</p>
+<p><strong>Ironhacker: </strong>{{user.role}}</p>
+</div>
+
+<a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
+  </section>
+
+</aside>
+
+
+<section class="socialMedia d-flex flex-column justify-content-center align-items-center">
+
+
+
+<a href="{{user.github}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/x1i5ovofrkio6eb/githubLogo.png?dl=0" alt=""></a>
+<a href="{{user.codewars}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/eb8b8fjtsd2qun8/codewarsLogo.png?dl=0" alt=""></a>
+<a href="{{user.linkedin}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/y7vi2s85k0ur1rk/linkedinLogo.png?dl=0" alt=""></a>
+<a href="{{user.facebook}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/9o0l2ujwhskvycs/facebookLogo.png?dl=0" alt=""></a>
+<a href="{{user.instagram}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/de3wvulto0tdffz/instagramLogo.png?dl=0" alt=""></a>
+<a href="{{user.twitter}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/i63povadpvrjnco/twitterLogo.png?dl=0" alt=""></a>
+
+</div>
+
+</section>
+
+
+
+<br>
+
+{{!-- <form>
+  <a href="{{user.project1}}">Project 1</a>
+  <a href="{{user.project2}}">Project 2</a>
+  <a href="{{user.project3}}">Project 3</a>
+</form>
+ --}}
+<aside>
+<a href="/eduRes">Educative Resources</a>
+<a href="/profiles">Ironhackers</a>
+
+</aside>
+
+</section>
+
+
+<br>
 
