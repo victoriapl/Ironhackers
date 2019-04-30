@@ -8,28 +8,19 @@ const userSchema = new Schema(
     name: String,
     age: Number,
     currentJob: String,
+    profileImg: String,
+    twitter: String,
+    linkedin: String,
+    github: String,
+    facebook: String,
+    codewars: String,
+    instagram: String,
+    project1: String,
+    project2: String,
+    project3: String,
     email: {
       type: String,
       unique: true
-    },
-    profileImg: String,
-    twitter: {
-      type: String
-    },
-    linkedin: {
-      type: String
-    },
-    github: {
-      type: String
-    },
-    facebook: {
-      type: String
-    },
-    codewars: {
-      type: String
-    },
-    instagram: {
-      type: String
     },
     role: {
       type: String,

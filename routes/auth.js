@@ -29,13 +29,21 @@ router.post('/signup', (req, res, next) => {
 router.post('/login', passport.authenticate('local'), (req, res, next) => {
     const user = req.user
     if(req.body.username === null){ 
+      req.app.locals.loggedUser = user
       return res.redirect(`/editProfile/${user._id}`)
     } return res.redirect(`/profile/${user._id}`)
 })
 
-// router.get('/logout', (req, res) => {
-//   req.logout();
-//   res.redirect('/');
-// });
+router.get('/logout', (req, res, next) => {
+  res.render('/logout')
+})
+
+router.get('/logout', (req, res) => {
+  req.app.locals.loggedUser = ''
+  if(req.app.locals.loggedUser === ''){
+    req.logOut()
+    res.redirect('/')
+  }
+});
 
 module.exports = router;

@@ -1,6 +1,6 @@
 <h2>Create your profile</h2>
 
-<form action="/editProfile/{{user._id}}" method="POST">
+<form action="/editProfile/{{user._id}}" method="POST" enctype="multipart/form-data">
   <label>Username</label>
   <input type="text" name="username" placeholder="NedStark123">
   <br>
@@ -21,5 +21,11 @@
   Codewars:<input type="text" name="codewars">
   Instagram:<input type="text" name="instagram">
   <br>
+  <label>Ironhack Projects:</label>
+  Project 1:<input type="text" name="project1">
+  Project 2:<input type="text" name="project2">
+  Project 3:<input type="text" name="project3">
+  <label>Profile picture</label>
+  <input type="file" name="profileImg"/>
   <input type="submit" value="Create">
 </form>
