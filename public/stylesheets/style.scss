@@ -1,107 +1,43 @@
-* {
+*{
   padding: 0px;
   margin: 0px;
 }
 
-.grey{
-  background-color: rgba(39, 43, 48, .9)
-}
-
-.logo1{
-  z-index: 1;
-}
-
-.logo2{
-  z-index: -1;
+#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100vw;
+  height: 100vh;
+  background: rgba(39, 43, 48, .9);
 }
 
 .blue{
-  position: absolute;
-  top: 16%;
-  left: 38%;
-}
+  background-image: url(https://dl.dropboxusercontent.com/s/zru3wmp70k17qyc/logoBlue.png?dl=0);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center;
 
-.indexLogin{
-  position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 90px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border:3px solid rgba(35, 111, 167, .9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center;
-}
-
-.indexSignup{
-  position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 200px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border:3px solid rgba(35, 111, 167, .9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center;
-}
-.loginForm{
-  position: absolute;
-  top: 383px;
-  left: 3px;
-  font-size: 15px;
-  margin: -1% 0% 0% 42%;
-}
-
-.loginInput, 
-.signupInput{
-  height: 50px;
-  width: 300px;
-  border: 2px solid #257ab9;
-}
-
-.loginButton{
-  position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 35px;
-  width: 230px;
-  font-weight: 900;
-  background: #257ab9;
-  border:10px;
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-}
-
-.initH1{
-  color: white;
-  padding-top: 34.5%;
   display: flex;
+  align-items: baseline;
   justify-content: center;
-  font-family: Yanone kaffeesatz;
+
+  width: 700px;
+  height: 550px;
 }
 
-.initP{
-  display: flex;
+.logo{
+  position: absolute;
+}
+
+.indexButtons{
+  display: flex; 
+  flex-direction: column;
   justify-content: center;
-  color: #c8c8c8;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#forgot{
-  margin-top: 40px;
-  margin-left: 71px;
-}
-
-
-.porfileLogout{
-  color: white;
-  font-family: Yanone Kaffeesatz;
-}
-
+  align-items: center;
+  }
 
 /////////// ANIMATIONS
 .logo-animation {
@@ -109,7 +45,15 @@
 	animation: rotate-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
 }
 
- @-webkit-keyframes rotate-out-top {
+.initH1{
+  display: flex;
+  align-items: center;
+  
+  font-family: Yanone kaffeesatz;
+  color: white;
+}
+
+@-webkit-keyframes rotate-out-top {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -139,6 +83,6 @@
     -webkit-transform-origin: top;
     transform-origin: top;
     opacity: 0;
+    visibility: hidden;
   }
 }
-
