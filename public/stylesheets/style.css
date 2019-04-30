@@ -2,52 +2,43 @@
   padding: 0px;
   margin: 0px; }
 
-.grey {
-  background-color: rgba(39, 43, 48, 0.9); }
-
-.logo1 {
-  z-index: 1; }
-
-.logo2 {
-  z-index: -1; }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(39, 43, 48, 0.9); }
 
 .blue {
-  position: absolute;
-  top: 16%;
-  left: 38%; }
+  background-image: url(https://dl.dropboxusercontent.com/s/zru3wmp70k17qyc/logoBlue.png?dl=0);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 700px;
+  height: 550px; }
 
-.indexLogin {
-  position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 90px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border: 3px solid rgba(35, 111, 167, 0.9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center; }
+.logo {
+  position: absolute; }
 
-.indexSignup {
-  position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 200px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border: 3px solid rgba(35, 111, 167, 0.9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center; }
+.indexButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.initH1 {
+  display: flex;
+  align-items: center;
+  font-family: Yanone kaffeesatz;
+  color: white; }
 
 .loginForm {
-  position: absolute;
-  top: 383px;
-  left: 3px;
-  font-size: 15px;
-  margin: -1% 0% 0% 42%; }
+  margin-top: 245px; }
 
 .loginInput,
 .signupInput {
@@ -55,38 +46,32 @@
   width: 300px;
   border: 2px solid #257ab9; }
 
-.loginButton {
+#forgot {
+  margin-top: -19px;
+  font-size: .9rem; }
+
+.initButton {
   position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 35px;
+  margin-top: 100px;
+  padding: 10px 0 10px 0;
   width: 230px;
-  font-weight: 900;
   background: #257ab9;
   border: 10px;
   border-radius: 5px;
-  padding: 10px 0 10px 0; }
+  color: white;
+  font-weight: 900; }
+
+.initText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c8c8c8; }
 
 .initH1 {
-  color: white;
-  padding-top: 34.5%;
-  display: flex;
-  justify-content: center;
   font-family: Yanone kaffeesatz; }
 
 .initP {
-  display: flex;
-  justify-content: center;
-  color: #c8c8c8;
   font-family: Arial, Helvetica, sans-serif; }
-
-#forgot {
-  margin-top: 40px;
-  margin-left: 71px; }
-
-.porfileLogout {
-  color: white;
-  font-family: Yanone Kaffeesatz; }
 
 .logo-animation {
   -webkit-animation: rotate-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;
@@ -118,6 +103,7 @@
     transform: rotate(-360deg);
     -webkit-transform-origin: top;
     transform-origin: top;
-    opacity: 0; } }
+    opacity: 0;
+    visibility: hidden; } }
 
 /*# sourceMappingURL=style.css.map */

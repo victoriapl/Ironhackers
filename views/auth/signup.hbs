@@ -1,45 +1,25 @@
+<body class="container">
+  <section class="blue">
 
-<body class="grey">
+<section class="loginForm">
 
-<div id="container">
-
-<div>
-  <img class="blue logo2" src="https://dl.dropboxusercontent.com/s/zru3wmp70k17qyc/logoBlue.png?dl=0" alt="" width="450px">
-<div>
+    <h1 style="font-size: 19px; color: white;" class="initP">Activate your account:</h1>
   
-  <form action="/auth/signup" method="POST" class="loginForm d-flex flex-column bd-highlight mb-3 card-text">
+<form action="/auth/signup" method="POST" class="d-flex justify-content-center align-items-center flex-column bd-highlight mb-3 card-text">
   
-  <input type="email" name="email" class="signupInput" placeholder="  Email"> <br>
-  <input type="password" name="password" class="signupInput" placeholder="  Password"><br>
-  
-  <input type="submit" class="loginButton" value="Sign up">
+  <input type="email" name="email" class="loginInput" placeholder="  Email"> <br>
+  <input type="password" name="password" class="loginInput" placeholder="  Password">
+  <input type="submit" class="initButton" value="SIGN UP">
   </form>
 
-</div>
-</div>
+</section>
 
-<div>
-  <div>
+
+  </section>
+
+<section class="initText">
 <h1 style="font-size: 70px" class="initH1">Student Platform</h1>
 <p class="initP">Please enter your student credentials in order to access your private area.</p>
-  </div>
+  </section>
 
 </body>
-
-
-{{!-- <h2>Signup page</h2>
-
-<form action="/auth/signup" method="POST">
-  <p>
-    <label>Email</label>
-    <input type="email" name="email" placeholder="email">
-  </p>
-  <p>
-    <label>Password</label>
-    <input type="password" name="password" placeholder="password">
-  </p>
-  <p>
-    <input type="submit" value="Sign up">
-  </p>
-</form>
-</body> --}}

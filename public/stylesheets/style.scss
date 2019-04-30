@@ -1,59 +1,56 @@
-* {
+*{
   padding: 0px;
   margin: 0px;
 }
 
-.grey{
-  background-color: rgba(39, 43, 48, .9)
-}
-
-.logo1{
-  z-index: 1;
-}
-
-.logo2{
-  z-index: -1;
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+  width: 100vw;
+  height: 100vh;
+  background: rgba(39, 43, 48, .9);
 }
 
 .blue{
-  position: absolute;
-  top: 16%;
-  left: 38%;
+  background-image: url(https://dl.dropboxusercontent.com/s/zru3wmp70k17qyc/logoBlue.png?dl=0);
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: center;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+
+  width: 700px;
+  height: 550px;
 }
 
-.indexLogin{
+///INDEX STYLE
+.logo{
   position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 90px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border:3px solid rgba(35, 111, 167, .9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center;
 }
 
-.indexSignup{
-  position: absolute;
+.indexButtons{
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+  
+.initH1{
+  display: flex;
+  align-items: center;
+    
+  font-family: Yanone kaffeesatz;
   color: white;
-  margin-top: 137px;
-  margin-left: 200px;
-  width: 100px;
-  font-weight: 900;
-  background: #257ab9;
-  border:3px solid rgba(35, 111, 167, .9);
-  border-radius: 5px;
-  padding: 10px 0 10px 0;
-  text-align: center;
-}
+  }
+
+///LOGIN & SIGNUP STYLE
 .loginForm{
-  position: absolute;
-  top: 383px;
-  left: 3px;
-  font-size: 15px;
-  margin: -1% 0% 0% 42%;
+  margin-top: 245px;
 }
 
 .loginInput, 
@@ -63,44 +60,138 @@
   border: 2px solid #257ab9;
 }
 
-.loginButton{
+#forgot{
+  margin-top: -19px;
+  font-size: .9rem;
+}
+
+.initButton{
   position: absolute;
-  color: white;
-  margin-top: 137px;
-  margin-left: 35px;
+  margin-top: 100px;
+  padding: 10px 0 10px 0;
   width: 230px;
-  font-weight: 900;
+
   background: #257ab9;
   border:10px;
+  
   border-radius: 5px;
-  padding: 10px 0 10px 0;
+  color: white;
+  font-weight: 900;
+}
+
+.initText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+  color: #c8c8c8;
 }
 
 .initH1{
-  color: white;
-  padding-top: 34.5%;
-  display: flex;
-  justify-content: center;
   font-family: Yanone kaffeesatz;
 }
 
 .initP{
-  display: flex;
-  justify-content: center;
-  color: #c8c8c8;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#forgot{
-  margin-top: 40px;
-  margin-left: 71px;
+//////////PROFILES
+nav {
+  width: 100vw;
+  height: 10vh;
+  background: grey;
 }
 
+ul{
+  display: flex;
+  justify-content: space-between;
+}
 
-.porfileLogout{
+li {
+  display: inline;
+  margin-left: 10px;
+  color: white;
+  margin: 4px 30px 0 30px;
+}
+
+img{
+  display: flex;
+  align-content: center;
+}
+
+.profileLogout{
   color: white;
   font-family: Yanone Kaffeesatz;
 }
+
+///hexagon pic configuration
+.hex {
+  width:150px;
+  height:86px;
+  background-color: #ccc;
+  background-repeat: repeat;
+  background-position: 50% 50%;                   
+  background-size: contain;                                                    
+  position: relative;
+  float:center;
+  margin:70px 35px;
+  text-align:center;
+  
+  zoom:2;
+}
+
+.hex.hex-gap {
+  margin-left: 86px;
+}
+
+.hex .corner-1,
+.hex .corner-2 {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: inherit;
+
+  z-index:-2;                                            
+ 
+  overflow:hidden;                
+  backface-visibility: hidden;                    
+}
+
+.hex .corner-1 {
+  z-index:0;
+  transform: rotate(60deg);
+}
+
+.hex .corner-2 {
+  transform: rotate(-60deg);
+}
+
+.hex .corner-1:before,
+.hex .corner-2:before {
+  width: 173px;
+  height: 173px;
+  content: '';
+  position: absolute;
+  background: inherit;
+  top:0;
+  left: 0;
+  z-index: 1;
+  background: inherit;
+  background-repeat:no-repeat;
+  backface-visibility: hidden;
+}                       
+
+.hex .corner-1:before {
+  transform: rotate(-60deg) translate(-87px, 0px);        
+  transform-origin: 0 0;
+}                       
+
+.hex .corner-2:before {
+  transform: rotate(60deg) translate(-48px, -11px);       
+  bottom:0;
+}           
 
 
 /////////// ANIMATIONS
@@ -109,7 +200,7 @@
 	animation: rotate-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
 }
 
- @-webkit-keyframes rotate-out-top {
+@-webkit-keyframes rotate-out-top {
   0% {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -139,6 +230,6 @@
     -webkit-transform-origin: top;
     transform-origin: top;
     opacity: 0;
+    visibility: hidden;
   }
 }
-
