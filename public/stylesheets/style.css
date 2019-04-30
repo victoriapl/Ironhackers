@@ -47,12 +47,23 @@
   border: 2px solid #257ab9; }
 
 #forgot {
-  margin-top: -19px;
+  margin-top: 50px;
   font-size: .9rem; }
 
-.initButton {
+.signButton {
   position: absolute;
   margin-top: 100px;
+  padding: 10px 0 10px 0;
+  width: 230px;
+  background: #257ab9;
+  border: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 900; }
+
+.loginButton {
+  position: absolute;
+  margin-top: 60px;
   padding: 10px 0 10px 0;
   width: 230px;
   background: #257ab9;
