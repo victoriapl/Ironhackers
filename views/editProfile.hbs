@@ -1,23 +1,18 @@
 <h2>Create your profile</h2>
 
-<form action="/editProfile/{{user._id}}" method="POST" enctype="multipart/form-data">
-<p>
+<form action="/editProfile/{{user._id}}" method="POST">
   <label>Username</label>
   <input type="text" name="username" placeholder="NedStark123">
-</p>
-<p>
+  <br>
   <label>Name</label>
   <input type="text" name="name" placeholder="Ned Stark">
-</p>
-<p>
+  <br>
   <label>Age</label>
   <input type="number" name="age" placeholder="45">
-</p>
-<p>
+  <br>
   <label>Current Job</label>
   <input type="text" name="currentJob" placeholder="Guardian of the North">
-</p>
-<p>
+  <br>
   <label>Social Media:</label>
   Twitter:<input type="text" name="twitter">
   LinkedIn:<input type="text" name="linkedin">
@@ -25,8 +20,6 @@
   Facebook:<input type="text" name="facebook">
   Codewars:<input type="text" name="codewars">
   Instagram:<input type="text" name="instagram">
-</p>
-  <p>
-    <input type="submit" value="Create">
-  </p>
+  <br>
+  <input type="submit" value="Create">
 </form>
