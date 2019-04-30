@@ -3,7 +3,7 @@
   margin: 0px;
 }
 
-#container{
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,7 @@
   height: 550px;
 }
 
+///INDEX STYLE
 .logo{
   position: absolute;
 }
@@ -38,19 +39,66 @@
   justify-content: center;
   align-items: center;
   }
+  
+.initH1{
+  display: flex;
+  align-items: center;
+    
+  font-family: Yanone kaffeesatz;
+  color: white;
+  }
+
+///LOGIN & SIGNUP STYLE
+.loginForm{
+  margin-top: 245px;
+}
+
+.loginInput, 
+.signupInput{
+  height: 50px;
+  width: 300px;
+  border: 2px solid #257ab9;
+}
+
+#forgot{
+  margin-top: -19px;
+  font-size: .9rem;
+}
+
+.initButton{
+  position: absolute;
+  margin-top: 100px;
+  padding: 10px 0 10px 0;
+  width: 230px;
+
+  background: #257ab9;
+  border:10px;
+  
+  border-radius: 5px;
+  color: white;
+  font-weight: 900;
+}
+
+.initText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+  color: #c8c8c8;
+}
+
+.initH1{
+  font-family: Yanone kaffeesatz;
+}
+
+.initP{
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /////////// ANIMATIONS
 .logo-animation {
 	-webkit-animation: rotate-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
 	animation: rotate-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
-}
-
-.initH1{
-  display: flex;
-  align-items: center;
-  
-  font-family: Yanone kaffeesatz;
-  color: white;
 }
 
 @-webkit-keyframes rotate-out-top {
