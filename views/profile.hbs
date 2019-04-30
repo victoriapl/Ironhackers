@@ -1,17 +1,19 @@
-<h2>Welcome to your profile</h2>
 <header>
   <nav>
     <ul>
-      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 9vh;"></li>
-      <li class="menu"><a href="/logout" class="profileLogout">LOGOUT</a></li>
+      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 4vh;"></li>
+      <li class="menu"><a href="/logout" class="profileLogout" style="font-size: 2rem;">LOGOUT</a></li>
     </ul>
   </nav>
 </header>
 
-</header> --}}
+</header>
+
+<h2>Welcome to your profile</h2>
+
 <div>
 {{#each user as |profile|}}
-<img src="{{profile.profileImg}}" width="200">
+<img src="{{!-- {{profile.profileImg}} --}}" width="200">
 <br>
 <span>{{profile.name}}</span>
 

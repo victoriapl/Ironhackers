@@ -37,7 +37,8 @@
   font-family: Yanone kaffeesatz;
   color: white; }
 
-.loginForm {
+.loginForm,
+.signForm {
   margin-top: 245px; }
 
 .loginInput,
@@ -54,7 +55,7 @@
   position: absolute;
   margin-top: 100px;
   padding: 10px 0 10px 0;
-  width: 230px;
+  width: 180px;
   background: #257ab9;
   border: 10px;
   border-radius: 5px;
@@ -65,7 +66,7 @@
   position: absolute;
   margin-top: 60px;
   padding: 10px 0 10px 0;
-  width: 230px;
+  width: 180px;
   background: #257ab9;
   border: 10px;
   border-radius: 5px;
@@ -86,18 +87,18 @@
 
 nav {
   width: 100vw;
-  height: 10vh;
+  height: 7vh;
   background: grey; }
 
 ul {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-content: center; }
 
 li {
-  display: inline;
-  margin-left: 10px;
+  display: flex;
   color: white;
-  margin: 4px 30px 0 30px; }
+  margin: 1.5vh 2.5vw 1.5vh 1vw; }
 
 img {
   display: flex;
