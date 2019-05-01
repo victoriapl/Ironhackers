@@ -1,8 +1,13 @@
 <h2>Learnings</h2>
+<a href="/profile/{{userID}}">Go back to your profile</a>
 
+{{#each learnings}}
+<ul class="list-group">
 
-  {{#each learnings}}
-    <a href="{{this}}">{{this}}</a><hr>
-  {{/each}}
+  <li class="list-group-item">
+        <a href="{{this}}">{{this}}</a>
+        </li>
 
-  <a href="/profile/{{userID}}">Go back to your profile</a>
+</ul>
+{{/each}}
+
