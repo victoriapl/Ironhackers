@@ -8,6 +8,4 @@ router.get('/profiles', (req, res, next) => {
   })
 })
 
-
-
 module.exports = router
