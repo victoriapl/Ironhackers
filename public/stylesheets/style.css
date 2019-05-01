@@ -2,7 +2,7 @@
   padding: 0px;
   margin: 0px; }
 
-.container {
+.initContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,7 +194,7 @@ img {
   transform: rotate(60deg) translate(-48px, -11px);
   bottom: 0; }
 
-.grid {
+.pGrid {
   width: 100%;
   display: table;
   border-collapse: separate;
@@ -204,9 +204,6 @@ img {
   width: 90%;
   height: 70%;
   margin: 5% 1% 3% 1%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   font-family: Yanone Kaffeesatz;
   font-size: 2rem;
   text-align: center; }
@@ -217,14 +214,15 @@ img {
   table-layout: fixed;
   margin: 0 0 -15px 0; }
 
-.item {
+.pItem {
+  border-radius: 4%;
   display: table-cell;
   background: grey;
-  padding: 2%;
-  color: #fff; }
+  padding: 2%; }
 
 .gridText {
-  color: white; }
+  color: white;
+  text-align: center; }
 
 .logo-animation {
   -webkit-animation: rotate-out-top 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1.5s both;

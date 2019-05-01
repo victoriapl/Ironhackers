@@ -1,7 +1,13 @@
 <h2>Extra Resources</h2>
+  <a href="/profile/{{userID}}">Go back to your profile</a>
 
   {{#each extraResources}}
-    <a href="{{this}}">{{this}}</a><hr>
+<ul class="list-group">
+
+  <li class="list-group-item list-group-item-action list-group-item-dark">
+    <a href="{{this}}">{{this}}</a>
+  </li>
+
+</ul>
   {{/each}}
 
-  <a href="/profile/{{userID}}">Go back to your profile</a>

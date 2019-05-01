@@ -1,7 +1,13 @@
 <h2>EDUCATIVE RESOURCES</h2>
+<a href="/profile/{{eduRes.userID}}">Go back to your profile</a>
 
 {{#each eduRes as |tag|}}
-<a href="/eduRes/{{tag._id}}">{{tag.name}}</a><br>
+<ul class="list-group">
+
+  <li class="list-group-item">
+    <a href="/eduRes/{{tag._id}}">{{tag.name}}</a>
+    </li>
+
+</ul>
 {{/each}}
 
-<a href="/profile/{{eduRes.userID}}">Go back to your profile</a>
