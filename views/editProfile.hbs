@@ -1,33 +1,32 @@
-<h2>Edit your profile</h2>
-
-<p>All the information will be public, so add only the information you want other Ironhackers to see.</p>
+<h2 style="font-size: 27px;">Edit your profile</h2><br>
+<p>All the information will be public, so add only the information you want other Ironhackers to see.</p><br>
 <form action="/editProfile/{{user._id}}" method="POST" enctype="multipart/form-data">
   <label>Username</label>
-  <input type="text" name="username" placeholder="NedStark123">
+  <input type="text" name="username" placeholder="NedStark123" value="{{user.username}}">
   <br>
   <label>Name</label>
-  <input type="text" name="name" placeholder="Ned Stark">
+  <input type="text" name="name" placeholder="Ned Stark" value="{{user.name}}">
   <br>
   <label>Age</label>
-  <input type="number" name="age" placeholder="45">
+  <input type="number" name="age" placeholder="45" value="{{user.age}}">
   <br>
   <label>Current Job</label>
-  <input type="text" name="currentJob" placeholder="Guardian of the North">
+  <input type="text" name="currentJob" placeholder="Guardian of the North" value="{{user.currentJob}}">
   <br>
   <h3>Social Media:</h3>
   <p>Make sure you are using "https://"</p>
-  Twitter:<input type="text" name="twitter">
-  LinkedIn:<input type="text" name="linkedin">
-  GitHub:<input type="text" name="github">
-  Facebook:<input type="text" name="facebook">
-  Codewars:<input type="text" name="codewars">
-  Instagram:<input type="text" name="instagram">
+  Twitter:<input type="text" name="twitter" value="{{user.twitter}}">
+  LinkedIn:<input type="text" name="linkedin" value="{{user.linkedin}}">
+  GitHub:<input type="text" name="github" value="{{user.github}}">
+  Facebook:<input type="text" name="facebook" value="{{user.facebook}}">
+  Codewars:<input type="text" name="codewars" value="{{user.codewars}}">
+  Instagram:<input type="text" name="instagram" value="{{user.instagram}}">
   <br>
   <label>Ironhack Projects:</label>
-  Project 1:<input type="text" name="project1">
-  Project 2:<input type="text" name="project2">
-  Project 3:<input type="text" name="project3">
+  Project 1:<input type="text" name="project1" value="{{user.project1}}">
+  Project 2:<input type="text" name="project2" value="{{user.project2}}">
+  Project 3:<input type="text" name="project3" value="{{user.project3}}">
   <label>Profile picture</label>
-  <input type="file" name="profileImg"/>
+  <input type="file" name="profileImg" value="{{user.profileImg}}"/>
   <input type="submit" value="Create">
 </form>
