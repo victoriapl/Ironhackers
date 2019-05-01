@@ -1,8 +1,10 @@
 <h1 style="font-size: 35px;">AGORA</h1><br>
-<a href="/profile/{{posts.userID}}">Go back to your profile</a><br><br>
+<a href="/profile/{{posts.userID}}">Go back to your profile</a>
+<a href="/auth/logout">Logout</a><br><br>
 <p>Wellcome to the Agora Space, in this place you can post your doubts, curiosities or anything related with the world of programming. Our rules are not strict, but respect is essential. You make agora a better place, have fun!</p><br>
 <a href="/agora/post">ADD A NEW POST</a><br><br>
 {{#each posts as |post|}}
+<img src="{{post.userId.profileImg}}" width="50"/><a href="/profile/{{post.userId._id}}">{{post.userId.username}}</a><br><br>
 <p>{{post.title}}</p>
 <p>{{post.content}}</p>
 <img src="{{post.image}}" width="400"/><br>

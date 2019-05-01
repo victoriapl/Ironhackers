@@ -41,12 +41,11 @@ router.post('/login', (req, res, next) => {
   })(req, res, next)
 })
 
-router.get('/logout', (req, res) => {
+
+router.get('/logout', (req, res, next) => {
   req.app.locals.loggedUser = ''
-  if(req.app.locals.loggedUser === ''){
-    req.logOut()
-    res.redirect('/')
-  }
-});
+  req.logOut()
+  res.redirect('/auth/login')
+})
 
 module.exports = router;
