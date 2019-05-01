@@ -102,7 +102,8 @@ li {
 
 img {
   display: flex;
-  align-content: center; }
+  align-content: center;
+  margin: .5vh 0 0 0; }
 
 .profileLogout {
   color: white;
@@ -129,8 +130,8 @@ img {
   height: 90vh; }
 
 .smLogos {
-  display: flex;
-  margin: 5% 1% 5% 15%;
+  padding-top: 5%;
+  margin: 7% 1% 5% 15%;
   width: 59%; }
 
 .tableP {
