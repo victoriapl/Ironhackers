@@ -1,0 +1,7 @@
+<h2>IRONHACKERS</h2>
+
+{{#each users as |user|}}
+<a href="/profile/{{user._id}}">{{user.name}}</a>
+<img src="{{user.profileImg}}" width="100" alt="">
+{{/each}}
+

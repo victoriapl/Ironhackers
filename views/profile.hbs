@@ -38,12 +38,10 @@
 <p><strong>Ironhacker: </strong>{{user.role}}</p>
 <br>
 <br>
-  </div>
-
-
-
+</div>
+{{#if user.editPermision}}
 <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
- 
+{{/if}}
   </section>
 
 </aside>
@@ -73,7 +71,10 @@
  --}}
 <aside>
 
-
+          <p><a href="/agora">AGORA</a></p>
+          <p><a href="/ih/profiles">IRONHACKERS</a></p>
+          <p><a href="/eduRes">EDUCATIVE RESOURCES</a></p>
+            <img src="https://dl.dropboxusercontent.com/s/e51gu9hk2hr7coo/IMG_20190415_184226_101.jpg?dl=0">
 
 
 

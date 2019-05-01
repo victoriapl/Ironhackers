@@ -32,9 +32,16 @@ router.post('/editProfile/:id', isLogged, uploadCloud.single('profileImg'), (req
 
 router.get('/profile/:id', isLogged, (req, res, next) => {
   const { id } = req.params
+  const userID = req.user._id
+  console.log(id)
+  let editPermision = false
   User.findById(id)
     .then(user => {
-      res.render('profile', {user})
+      if(userID == id){ 
+        editPermision = true
+     }  
+     user.editPermision = editPermision
+     res.render('profile', {user})
     })
     .catch(err => {
       res.send(err)
