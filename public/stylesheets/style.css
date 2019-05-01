@@ -194,6 +194,16 @@ img {
   transform: rotate(60deg) translate(-48px, -11px);
   bottom: 0; }
 
+.editContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 88vh;
+  border: 1px solid grey;
+  border-radius: 3%; }
+
 .pGrid {
   width: 100%;
   display: table;
