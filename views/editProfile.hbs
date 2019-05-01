@@ -1,23 +1,38 @@
-<h style="font-size: 27px;">Edit your profile</h><br>
-<p>All the information will be public, so add only the information you want other Ironhackers to see.</p>
+<div class="card text-center">
 
-<section class="editContainer">
+{{!-- edit profile --}}
+<div class="card-header d-flex justify-content-center">
 
+<div class="card bg-light border-info w-75 bg-light">
+    <h1>Edit your profile</h1><br>
 
+    <h5 class="card-subtitle">All the information will be public, 
+      so add only the information you want other Ironhackers to see.</h5>
+</div>
+</div>
+  
+  <div class="card-body d-flex justify-content-center">
+
+<div class="card border-info w-75">
+
+{{!-- card body --}}
+<br>
+  <div class="card-body d-flex justify-content-center">
+    
 <form action="/editProfile/{{user._id}}" method="POST" enctype="multipart/form-data">
 
 {{!-- username --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Username</span>
+    <span class="input-group-text">username</span>
   </div>
   <input type="text" class="form-control" placeholder="NedStark123" name="username" value="{{user.username}}">
 </div>
 
 {{!-- name --}}
-<div class="input-group mb-3">
+<div class="input-group mb-3" style="width: 70rem;">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Complete Name</span>
+    <span class="input-group-text">Complete Name</span>
   </div>
   <input type="text" class="form-control" placeholder="Ned Stark" name="name" value="{{user.name}}">
 </div>
@@ -25,21 +40,29 @@
 {{!-- age --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Age</span>
+    <span class="input-group-text">Age</span>
   </div>
   <input type="number" class="form-control" placeholder="45" name="age" value="{{user.age}}">
 </div>
 
 {{!-- current job --}}
-<div class="input-group mb-3">
+<div class="input-group mb-5">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Current Job</span>
+    <span class="input-group-text">Current Job</span>
   </div>
-  <input type="text" class="form-control" placeholder="Guardian of the North" name="currentjob" value="{{user.currentJob}}">
+  <input type="text" class="form-control" placeholder="Guardian of the North" name="currentjob" value="{{user.currentjob}}">
 </div>
 
 {{!-- profile picture --}}
+<div class="card-body d-flex justify-content-center">
+<div class="card text-center mb-5" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Upload your Profile Picture:</h5>
   <input type="file" name="profileImg" value="{{user.profileImg}}"/>
+  </div>
+</div>
+
+</div>
 
 
 
@@ -48,7 +71,7 @@
 {{!-- twitter --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Twitter</span>
+    <span class="input-group-text">Twitter</span>
   </div>
   <input type="text" class="form-control" placeholder="www.twitter.com/NedStark123" name="twitter" value="{{user.twitter}}">
 </div>
@@ -56,7 +79,7 @@
 {{!-- linkedin --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">LinkedIn</span>
+    <span class="input-group-text">LinkedIn</span>
   </div>
   <input type="text" class="form-control" placeholder="www.linkedin.com/in/ned-stark123/" name="linkedin" value="{{user.linkedin}}">
 </div>
@@ -64,7 +87,7 @@
 {{!-- github --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">GitHub</span>
+    <span class="input-group-text">GitHub</span>
   </div>
   <input type="text" class="form-control" placeholder="www.github.com/nedstark" name="github" value="{{user.github}}">
 </div>
@@ -72,7 +95,7 @@
 {{!-- facebook --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Facebook</span>
+    <span class="input-group-text">Facebook</span>
   </div>
   <input type="text" class="form-control" placeholder="www.facebook.com/nedstark" name="facebook" value="{{user.facebook}}">
 </div>
@@ -80,7 +103,7 @@
 {{!-- codewars --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">CodeWars</span>
+    <span class="input-group-text">CodeWars</span>
   </div>
   <input type="text" class="form-control" placeholder="www.codewars.com/users/nedstark" name="codewars" value="{{user.codewars}}">
 </div>
@@ -88,7 +111,7 @@
 {{!-- instagram --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Instagram</span>
+    <span class="input-group-text">Instagram</span>
   </div>
   <input type="text" class="form-control" placeholder="www.instagram.com/nedstark/" name="instagram" value="{{user.instagram}}">
 </div>
@@ -98,7 +121,7 @@
 {{!-- project 1 --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Project 1</span>
+    <span class="input-group-text">Project 1</span>
   </div>
   <input type="text" class="form-control" placeholder="Game Project" name="project1" value="{{user.project1}}">
 </div>
@@ -106,7 +129,7 @@
 {{!-- project 2 --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Project 2</span>
+    <span class="input-group-text">Project 2</span>
   </div>
   <input type="text" class="form-control" placeholder="Structure Project" name="project2" value="{{user.project2}}">
 </div>
@@ -114,11 +137,24 @@
 {{!-- project 3 --}}
 <div class="input-group mb-3">
   <div class="input-group-prepend">
-    <span class="input-group-text" id="basic-addon1">Project 3</span>
+    <span class="input-group-text">Project 3</span>
   </div>
   <input type="text" class="form-control" placeholder="Final Project" name="project3" value="{{user.project3}}">
 </div>
 
-  <input type="submit" value="Create">
+{{!-- button --}}
+<button type="submit" class="btn btn-outline-primary" value="Create">Go to my Profile</button>
+
 </form>
-</section>
+
+  </div>
+</div>
+
+
+
+  </div>
+  <div class="card-footer text-muted">
+    Welcome to Ironhack
+  </div>
+</div>
+
