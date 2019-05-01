@@ -12,7 +12,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">username</span>
   </div>
-  <input type="text" class="form-control" placeholder="NedStark123" aria-label="Username" aria-describedby="basic-addon1" value="{{user.username}}">
+  <input type="text" class="form-control" placeholder="NedStark123" name="username" value="{{user.username}}">
 </div>
 
 {{!-- name --}}
@@ -20,7 +20,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Complete Name</span>
   </div>
-  <input type="text" class="form-control" placeholder="Ned Stark" aria-label="Name" aria-describedby="basic-addon1" value="{{user.name}}">
+  <input type="text" class="form-control" placeholder="Ned Stark" name="name"  value="{{user.name}}">
 </div>
 
 {{!-- age --}}
@@ -28,7 +28,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Age</span>
   </div>
-  <input type="number" class="form-control" placeholder="45" aria-label="Age" aria-describedby="basic-addon1" value="{{user.age}}">
+  <input type="number" class="form-control" placeholder="45" name="age" value="{{user.age}}">
 </div>
 
 {{!-- current job --}}
@@ -36,7 +36,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Current Job</span>
   </div>
-  <input type="text" class="form-control" placeholder="Guardian of the North" aria-label="Currentjob" aria-describedby="basic-addon1" value="{{user.currentJob}}">
+  <input type="text" class="form-control" placeholder="Guardian of the North" name="currentJob" value="{{user.currentJob}}">
 </div>
 
   {{!-- <input type="file" name="profileImg" value="{{user.profileImg}}"/>
@@ -47,7 +47,7 @@
     <span class="input-group-text" id="inputGroupFileAddon01">Porfile Picture</span>
   </div>
   <div class="custom-file">
-    <input type="file" value="{{user.porfileImg}}" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+    <input type="file" name="profileImg" value="{{user.porfileImg}}" class="custom-file-input" id="inputGroupFile01">
     <label class="custom-file-label" for="inputGroupFile01">Choose Image</label>
   </div>
 </div>
@@ -59,7 +59,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Twitter</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://twitter.com/NedStark123" aria-label="Twitter" aria-describedby="basic-addon1" value="{{user.twitter}}">
+  <input type="text" class="form-control" placeholder="https://twitter.com/NedStark123" name="twitter" value="{{user.twitter}}">
 </div>
 
 {{!-- linkedin --}}
@@ -67,7 +67,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">LinkedIn</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://www.linkedin.com/in/ned-stark123/" aria-label="LinkedIn" aria-describedby="basic-addon1" value="{{user.linkedin}}">
+  <input type="text" class="form-control" placeholder="https://www.linkedin.com/in/ned-stark123/" name="linkedin" value="{{user.linkedin}}">
 </div>
 
 {{!-- github --}}
@@ -75,7 +75,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">GitHub</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://github.com/nedstark" aria-label="GitHub" aria-describedby="basic-addon1" value="{{user.github}}">
+  <input type="text" class="form-control" placeholder="https://github.com/nedstark" name="github" value="{{user.github}}">
 </div>
 
 {{!-- facebook --}}
@@ -83,7 +83,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Facebook</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://www.facebook.com/nedstark" aria-label="Facebook" aria-describedby="basic-addon1" value="{{user.facebook}}">
+  <input type="text" class="form-control" placeholder="https://www.facebook.com/nedstark" name="facebook" value="{{user.facebook}}">
 </div>
 
 {{!-- codewars --}}
@@ -91,7 +91,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">CodeWars</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://www.codewars.com/users/nedstark" aria-label="CodeWars" aria-describedby="basic-addon1" value="{{user.codewars}}">
+  <input type="text" class="form-control" placeholder="https://www.codewars.com/users/nedstark" name="codeWars" value="{{user.codewars}}">
 </div>
 
 {{!-- instagram --}}
@@ -99,7 +99,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Instagram</span>
   </div>
-  <input type="text" class="form-control" placeholder="https://www.instagram.com/nedstark/" aria-label="Instagram" aria-describedby="basic-addon1" value="{{user.instagram}}">
+  <input type="text" class="form-control" placeholder="https://www.instagram.com/nedstark/" name="instagram" value="{{user.instagram}}">
 </div>
 
 <h3>My IronProjects</h3>
@@ -109,7 +109,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Project 1</span>
   </div>
-  <input type="text" class="form-control" placeholder="Game Project" aria-label="IronGame" aria-describedby="basic-addon1" value="{{user.project1}}">
+  <input type="text" class="form-control" placeholder="Game Project" name="project1" value="{{user.project1}}">
 </div>
 
 {{!-- project 2 --}}
@@ -117,7 +117,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Project 2</span>
   </div>
-  <input type="text" class="form-control" placeholder="Structure Project" aria-label="IronStructure" aria-describedby="basic-addon1" value="{{user.project2}}">
+  <input type="text" class="form-control" placeholder="Structure Project" name="project2" value="{{user.project2}}">
 </div>
 
 {{!-- project 3 --}}
@@ -125,7 +125,7 @@
   <div class="input-group-prepend">
     <span class="input-group-text" id="basic-addon1">Project 3</span>
   </div>
-  <input type="text" class="form-control" placeholder="Final Project" aria-label="IrinFinal" aria-describedby="basic-addon1" value="{{user.project3}}">
+  <input type="text" class="form-control" placeholder="Final Project" name="project3" value="{{user.project3}}">
 </div>
 
   <input type="submit" value="Create">
