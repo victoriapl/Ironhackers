@@ -39,8 +39,9 @@
 <p><strong>Current Job: </strong>{{user.currentJob}}</p>
 <p><strong>Ironhacker: </strong>{{user.role}}</p>
 </div>
-
+{{#if user.editPermision}}
 <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
+{{/if}}
   </section>
 
 </aside>
@@ -73,7 +74,7 @@
  --}}
 <aside>
 <a href="/eduRes">Educative Resources</a>
-<a href="/profiles">Ironhackers</a>
+<a href="/ih/profiles">Ironhackers</a>
 
 </aside>
 

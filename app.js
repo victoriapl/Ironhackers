@@ -61,9 +61,11 @@ app.locals.title = 'Ironhackers'
 const index = require('./routes/index')
 const auth = require('./routes/auth')
 const eduRes = require('./routes/eduRes')
+const ironhackers = require('./routes/ironhackers')
 app.use('/', index)
 app.use('/auth', auth)
 app.use('/', eduRes)
 app.use('/eduRes', isLogged)
+app.use('/ih', ironhackers)
 
 module.exports = app

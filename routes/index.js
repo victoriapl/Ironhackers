@@ -25,16 +25,23 @@ router.post('/editProfile/:id', isLogged, uploadCloud.single('profileImg'), (req
   const { username, name, age, currentJob, twitter, linkedin, github, facebook, codewars, instagram } = req.body
   User.findByIdAndUpdate(id, { $set: {username, name, age, currentJob, twitter, linkedin, github, facebook, codewars, instagram, profileImg: req.file ? req.file.secure_url : '' } }, { new: true })
     .then(user => {
-    return res.redirect(`/profile/${user._id}`)
+    return res.redirect(`/profile/${user._id}`, user)
     })
     .catch(err => res.send(err))
 })
 
 router.get('/profile/:id', isLogged, (req, res, next) => {
   const { id } = req.params
+  const userID = req.user._id
+  console.log(id)
+  let editPermision = false
   User.findById(id)
     .then(user => {
-      res.render('profile', {user})
+      if(userID == id){ 
+        editPermision = true
+     }  
+     user.editPermision = editPermision
+     res.render('profile', {user})
     })
     .catch(err => {
       res.send(err)
