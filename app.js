@@ -62,10 +62,12 @@ const index = require('./routes/index')
 const auth = require('./routes/auth')
 const eduRes = require('./routes/eduRes')
 const ironhackers = require('./routes/ironhackers')
+const agora = require('./routes/agora')
 app.use('/', index)
 app.use('/auth', auth)
 app.use('/', eduRes)
 app.use('/eduRes', isLogged)
 app.use('/ih', ironhackers)
+app.use('/agora', agora)
 
 module.exports = app
