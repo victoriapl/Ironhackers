@@ -1,9 +1,9 @@
 <header>
   <nav>
     <ul>
-      <li class="menu" style="font-size: 1.3rem;">{{user.name}}</li>
+      <li class="menu" style="font-size: 1.6rem;">{{user.name}}</li>
       <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 3vh;"></li>
-      <li class="menu"><a href="/auth/logout" class="navButtons" style="font-size: 1.3rem;">LOGOUT</a></li>
+      <li class="menu"><a href="/auth/logout" class="navButtons" style="font-size: 1.6rem;">LOGOUT</a></li>
     </ul>
   </nav>
   <div class="navColorDiv"></div>
@@ -89,6 +89,8 @@
 {{!-- menu section --}}
 <aside class="pf-menu">
   <div class="box menuBox">
+    <div class="card">
+
 
 {{!-- edu --}}
   <div class="box edu">
@@ -100,36 +102,13 @@
    <a class="gridText" href="/agora">AGORA</a>
   </div>
 
-{{!-- pic --}}
-  <div class="box picMenu">
-    <img width="47%" src="https://dl.dropboxusercontent.com/s/e51gu9hk2hr7coo/IMG_20190415_184226_101.jpg?dl=0" width="70%">
-  </div>
-
-{{!-- ironhackers --}}
+{{!-- Ironhackers --}}
   <div class="box ironhackers">
     <a class="gridText" href="/ih/profiles">IRONHACKERS</a>
   </div>
 
-{{!-- project1 --}}
-  <div class="box project-1">
-    <a class="gridText" href="{{user.project1}}">Project 1</a>
-  </div>
-
-{{!-- proyect2 --}}
-  <div class="box project-2">
-   <a class="gridText" href="{{user.project2}}">Project 2</a>
-  </div>
-
-{{!-- proyect3 --}}
-  <div class="box project-3">
-    <a class="gridText" href="{{user.project3}}">Project 3</a>
-  </div>
-
-  </div>
+    </div>
 </aside>
-
-
-
 </section>
 {{!-- final --}}
 </section>
