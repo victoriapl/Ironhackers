@@ -16,12 +16,16 @@
   <a href="/profile/{{userID}}">Go back to your profile</a>
 
   {{#each extraResources}}
-<ul class="list-group">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-action list-group-item-dark">
+        <a href="{{this}}">{{this}}</a>
+      {{#if ../admin}}
+        <a href="/admin/deleteExtraRes">Delete resource</a>
+        {{/if}}
+      </li>
 
-  <li class="list-group-item list-group-item-action list-group-item-dark">
-    <a href="{{this}}">{{this}}</a>
-  </li>
-
-</ul>
+    </ul>
   {{/each}}
 
+
+ 
