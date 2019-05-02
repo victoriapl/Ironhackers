@@ -44,7 +44,7 @@
     <div class="col-sm-7">
     <a href="/editProfile/{{user._id}}" class="profileButton btn btn-outline-dark btn-sm">Edit profile</a>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
     <a href="/{{user.id}}/delete" class="profileButton btn btn-outline-dark btn-sm">Delete profile</a>
     </div>
     {{/if}}
@@ -52,7 +52,7 @@
     <div class="col-sm-7">
     <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
     <a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
     </div>
     {{/if}}
@@ -86,49 +86,46 @@
     </div>
 </aside>
 
-{{!-- menu --}}
+{{!-- menu section --}}
 <aside class="pf-menu">
-    <div class="boxMenu">
-    
-{{!-- <form>
-  <a href="{{user.project1}}">Project 1</a>
-  <a href="{{user.project2}}">Project 2</a>
-  <a href="{{user.project3}}">Project 3</a>
-</form>
- --}}
+  <div class="box menuBox">
 
- {{!-- jd --}}
-<aside id="profileGrid">
-
-  <div class="pGrid">
-    
-  <div class="grid-row">
-
-      <div class="pItem">
-        <a class="gridText" href="/agora">AGORA</a>
-      </div>
-    
-      <div class="pItem">
-        <a class="gridText" href="/ih/profiles">IRONHACKERS</a>
-        <img src="https://dl.dropboxusercontent.com/s/e51gu9hk2hr7coo/IMG_20190415_184226_101.jpg?dl=0" width="70%">
-      </div>
-  
+{{!-- edu --}}
+  <div class="box edu">
+    <a class="gridText" href="/eduRes">EDUCATIVE RESOURCES</a>  
   </div>
 
-  <div class="grid-row">
+{{!-- agora --}}
+  <div class="box agora">
+   <a class="gridText" href="/agora">AGORA</a>
+  </div>
 
-      <div class="pItem">
-      <a class="gridText" href="/eduRes">EDUCATIVE RESOURCES</a>  
-    
-      </div>
+{{!-- pic --}}
+  <div class="box picMenu">
+    <img width="47%" src="https://dl.dropboxusercontent.com/s/e51gu9hk2hr7coo/IMG_20190415_184226_101.jpg?dl=0" width="70%">
+  </div>
+
+{{!-- ironhackers --}}
+  <div class="box ironhackers">
+    <a class="gridText" href="/ih/profiles">IRONHACKERS</a>
+  </div>
+
+{{!-- project1 --}}
+  <div class="box project-1">
+    <a class="gridText" href="{{user.project1}}">Project 1</a>
+  </div>
+
+{{!-- proyect2 --}}
+  <div class="box project-2">
+   <a class="gridText" href="{{user.project2}}">Project 2</a>
+  </div>
+
+{{!-- proyect3 --}}
+  <div class="box project-3">
+    <a class="gridText" href="{{user.project3}}">Project 3</a>
+  </div>
 
   </div>
-  
-
-</div>
-</aside>
-
-    </div>
 </aside>
 
 

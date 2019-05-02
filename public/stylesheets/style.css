@@ -116,8 +116,8 @@ img {
 .p-gridContainer {
   display: grid;
   grid-template-columns: .8fr .2fr 1.5fr;
-  grid-gap: 1px;
-  padding: 0 0px 0 10px;
+  grid-gap: 5px;
+  padding: 20px 0px 0 10px;
   position: absolute;
   top: 7.5vh;
   bottom: 0; }
@@ -127,15 +127,11 @@ img {
 
 .profileContainer {
   display: grid;
-  padding: 1px;
+  padding: 30px;
   align-content: center;
   grid-template-rows: 2fr 2fr 1fr;
   grid-gap: 10px; }
 
-/* .buttonsBox{
-  display: grid;
-  align-content: center;
-} */
 .profileButton {
   width: 6vw;
   display: grid;
@@ -170,11 +166,75 @@ img {
 
 .pf-menu {
   display: grid;
+  justify-content: space-evenly;
   width: 70vw;
   align-content: center;
-  background: pink;
   grid-gap: 10px;
   padding: 10px; }
+
+.menuBox {
+  display: grid;
+  grid-gap: 10px;
+  width: 60vw;
+  height: 80vh; }
+
+.gridText {
+  color: white; }
+
+.edu {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column: 1 / 2;
+  width: 300px;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
+
+.agora {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column: 1/2;
+  display: grid;
+  justify-content: space-around;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
+
+.picMenu {
+  display: grid;
+  grid-column: 2/6;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+
+.ironhackers {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column: 1/4;
+  height: 100px;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
+
+.project-1 {
+  grid-row-start: 1;
+  grid-column: 4/6;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
+
+.project-2 {
+  grid-row-start: 2;
+  grid-column: 4/6;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
+
+.project-3 {
+  grid-row-start: 3;
+  grid-column: 4/6;
+  background-color: grey;
+  border: black;
+  border-radius: 4%; }
 
 .editContainer {
   display: flex;
