@@ -41,11 +41,13 @@
 </div>
 {{#if user.editPermision}}
 <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
-<a href="/{{user.id}}/delete">Delete your profile</a>
+<br>
+<a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
 {{/if}}
 {{#if user.admin}}
 <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
-<a href="/{{user.id}}/delete">Delete your profile</a>
+<br>
+<a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
 {{/if}}
   </section>
 

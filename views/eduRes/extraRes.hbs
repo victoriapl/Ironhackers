@@ -10,22 +10,34 @@
 {{!-- ////////////////////////////////////////////////////////////// --}}
 
 
+<div class="card">
+<div class="card-header d-flex flex-column justify-content-center">
+<h2 class="text-center">Extra Resources</h2>
+<hr>
+
+{{!-- body --}}
+<div class="card-body d-flex flex-column">
 
 
-<h2>Extra Resources</h2>
-  <a href="/profile/{{userID}}">Go back to your profile</a>
+{{#each extraResources}}
 
-  {{#each extraResources}}
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-action list-group-item-dark">
-        <a href="{{this}}">{{this}}</a>
-      {{#if ../admin}}
-        <a href="/admin/deleteExtraRes">Delete resource</a>
-        {{/if}}
-      </li>
+<ul class="card border-info">
+  <a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="{{this}}">{{this}}</a>
+  <a  href="/eduRes/{{tag._id}}">{{tag.name}}</a>
+  
+{{#if ../admin}}
+  <a class="text-center" href="/admin/deleteExtraRes">Delete resource</a>
+{{/if}}
+</ul>
 
-    </ul>
-  {{/each}}
+{{/each}}
+
+    </div>
+  <div class="card-footer text-muted">
+<a class="btn btn-light" href="/profile/{{userID}}" role="button">Back to profile</a>
+  </div>
+</div>
+
 
 
  
