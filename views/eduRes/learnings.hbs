@@ -10,17 +10,29 @@
 {{!-- ////////////////////////////////////////////////////////////// --}}
 
 
+<div class="card">
+<div class="card-header d-flex flex-column justify-content-center">
+<h2 class="text-center">Learnings</h2>
+<hr>
 
-<h2>Learnings</h2>
-<a href="/profile/{{userID}}">Go back to your profile</a>
+{{!-- body --}}
+<div class="card-body d-flex flex-column">
+
 
 {{#each learnings}}
-<ul class="list-group">
+<ul class="card border-info">
 
-  <li class="list-group-item">
-        <a href="{{this}}">{{this}}</a>
-        </li>
+    <a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="{{this}}">{{this}}</a>
 
 </ul>
 {{/each}}
 
+
+</div>
+</div>
+  </div>
+  <div class="card-footer text-muted">
+<a class="btn btn-light" href="/profile/{{userID}}" role="button">Back to profile</a>
+  </div>
+  
+</div>
