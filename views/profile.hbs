@@ -6,69 +6,90 @@
       <li class="menu"><a href="/auth/logout" class="navButtons" style="font-size: 1.3rem;">LOGOUT</a></li>
     </ul>
   </nav>
+  <div class="navColorDiv"></div>
 </header>
 
 
-<section class="d-flex flex-row">
-
+<section class="p-gridContainer">
 {{!-- Profile data container --}}
 <aside class="profileContainer">
 
-  <section class="d-flex flex-column justify-content-between align-items-center ">
+{{!-- hex --}}
+  <div class="box">
+    <div class="d-flex justify-content-center" style="width: 19.5rem;">
+    <div class="hex" style="background-image: url({{user.profileImg}});">		
+		  <div class="corner-1"></div>
+	    <div class="corner-2"></div>
+    </div>
 
-{{!-- Hex Img --}}
-<div>
-  <br>
-<div class="hex" style="background-image: url({{user.profileImg}});">		
-		
-	<div class="corner-1"></div>
-	<div class="corner-2"></div>
-  
-</div>
-	<br>
+    </div>
+    <br>
 <hr>
+  </div>
+  
+{{!-- data user --}}
+  <div class="box">
+    <h1 id="profileUsername">Welcome, {{user.username}}</h1>
+    <br>
+    <p><strong>Complete name: </strong>{{user.name}}</p>
+    <p><strong>e-mail: </strong>{{user.email}}</p>
+    <p><strong>Age: </strong>{{user.age}}</p>
+    <p><strong>Current Job: </strong>{{user.currentJob}}</p>
+    <p><strong>Ironhacker: </strong>{{user.role}}</p>
+  </div>
 
-<h1 id="profileUsername">Welcome, {{user.username}}</h1>
-<br>
-<p><strong>Complete name: </strong>{{user.name}}</p>
-<p><strong>e-mail: </strong>{{user.email}}</p>
-<p><strong>Age: </strong>{{user.age}}</p>
-<p><strong>Current Job: </strong>{{user.currentJob}}</p>
-<p><strong>Ironhacker: </strong>{{user.role}}</p>
-<br>
-<br>
-</div>
-{{#if user.editPermision}}
-<a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
-<br>
-<a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
-{{/if}}
-{{#if user.admin}}
-<a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
-<br>
-<a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
-{{/if}}
-  </section>
+{{!-- buttons edit and delete --}}
+  <div class="box row">
+    {{#if user.editPermision}}
+    <div class="col-sm-7">
+    <a href="/editProfile/{{user._id}}" class="profileButton btn btn-outline-dark btn-sm">Edit profile</a>
+    </div>
+    <div class="col-sm-3">
+    <a href="/{{user.id}}/delete" class="profileButton btn btn-outline-dark btn-sm">Delete profile</a>
+    </div>
+    {{/if}}
+    {{#if user.admin}}
+    <div class="col-sm-7">
+    <a href="/editProfile/{{user._id}}" class="btn btn-outline-dark btn-sm">Edit profile</a>
+    </div>
+    <div class="col-sm-3">
+    <a href="/{{user.id}}/delete" class="btn btn-outline-dark btn-sm">Delete profile</a>
+    </div>
+    {{/if}}
+  </div>
 
 </aside>
 
-{{!-- Social Media column bar --}}
-<section class="socialMedia d-flex flex-column justify-content-center align-items-center">
+{{!-- social media buttons --}}
+<aside class="socialMedia">
+  <div class="smButtons">
+    
+    <div class="circleButton">
+      <a href="{{user.github}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/x1i5ovofrkio6eb/githubLogo.png?dl=0" alt=""></a>
+    </div>
+    <div class="circleButton">
+      <a href="{{user.codewars}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/eb8b8fjtsd2qun8/codewarsLogo.png?dl=0" alt=""></a>
+    </div>
+    <div class="circleButton">
+      <a href="{{user.linkedin}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/y7vi2s85k0ur1rk/linkedinLogo.png?dl=0" alt=""></a>
+    </div>
+    <div class="circleButton">
+      <a href="{{user.facebook}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/9o0l2ujwhskvycs/facebookLogo.png?dl=0" alt=""></a>
+    </div>
+    <div class="circleButton">
+      <a href="{{user.instagram}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/de3wvulto0tdffz/instagramLogo.png?dl=0" alt=""></a>
+    </div>
+    <div class="circleButton">
+      <a href="{{user.twitter}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/i63povadpvrjnco/twitterLogo.png?dl=0" alt=""></a>
+    </div>
+      
+    </div>
+</aside>
 
-
-
-<a href="{{user.github}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/x1i5ovofrkio6eb/githubLogo.png?dl=0" alt=""></a>
-<a href="{{user.codewars}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/eb8b8fjtsd2qun8/codewarsLogo.png?dl=0" alt=""></a>
-<a href="{{user.linkedin}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/y7vi2s85k0ur1rk/linkedinLogo.png?dl=0" alt=""></a>
-<a href="{{user.facebook}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/9o0l2ujwhskvycs/facebookLogo.png?dl=0" alt=""></a>
-<a href="{{user.instagram}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/de3wvulto0tdffz/instagramLogo.png?dl=0" alt=""></a>
-<a href="{{user.twitter}}"><img class="smLogos" src="https://dl.dropboxusercontent.com/s/i63povadpvrjnco/twitterLogo.png?dl=0" alt=""></a>
-
-</div>
-
-</section>
-
-
+{{!-- menu --}}
+<aside class="pf-menu">
+    <div class="boxMenu">
+    
 {{!-- <form>
   <a href="{{user.project1}}">Project 1</a>
   <a href="{{user.project2}}">Project 2</a>
@@ -107,8 +128,11 @@
 </div>
 </aside>
 
+    </div>
+</aside>
+
+
+
 </section>
-
-
-<br>
-
+{{!-- final --}}
+</section>
