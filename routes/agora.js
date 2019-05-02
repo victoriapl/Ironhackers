@@ -7,12 +7,14 @@ const {isLogged} = require('../handlers/middlewares')
 
 router.get('/', isLogged, (req, res, next) => {
   const userID = req.user._id
+  let admin = req.user.role === 'ADMIN'
   Agora.find()
   .populate('userId')
   .sort({ createdAt: -1 })
   .then(posts => {
     posts.id = userID
-    res.render('agora/index', {posts})
+    const data = {posts, admin}
+    res.render('agora/index', data)
   })
   .catch(err => res.send(err))
 })
@@ -30,6 +32,17 @@ router.post('/post', uploadCloud.single('image'), isLogged, (req, res, next) => 
     res.redirect('/agora')
   })
   .catch(err => res.send(err))
+})
+
+router.get('/deletePost/:id', (req, res, next) => {
+  const {id} = req.params
+  Agora.findByIdAndDelete(id)
+    .then(post => {
+      res.redirect('/agora')
+    }) 
+    .catch(err => {
+      console.log(err)
+    })
 })
 
 

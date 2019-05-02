@@ -22,13 +22,13 @@
       <div class="col-sm-4">
           <a style="font-weight:200;" href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
       </div>
-      {{#if ./admin}}
-      <a href="/admin/deletePost">Delete resource</a>
-      {{/if}}
+     {{#if @root.admin}}
+      <a class="text-center" href="/agora/deletePost/{{post._id}}">Delete post</a>
+     {{/if}}
     </div>
   </div>
   <div class="card-body">
-    <img src="{{post.image}}" width="70%" style="margin-left:15%;"/><br>
+    <img src="{{post.image}}" width="40%" style="margin-left:30%;"/><br>
     <h4 class="card-title">{{post.title}}</h4>
     <p class="card-text">{{post.content}}</p>
   </div>

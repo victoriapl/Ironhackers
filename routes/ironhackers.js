@@ -1,11 +1,27 @@
 const router = require('express').Router()
 const User = require('../models/User')
+const {isLogged} = require('../handlers/middlewares')
 
-router.get('/profiles', (req, res, next) => {
+router.get('/profiles', isLogged, (req, res, next) => {
+  const id = req.user._id
+  let admin = req.user.role === 'ADMIN'
   User.find()
   .then(users => {
-    res.render('profiles/ironhackers', { users })
+    users.id = id
+    const data = {users, admin}
+    res.render('profiles/ironhackers', data)
   })
+})
+
+router.get('/deleteProfile/:id', (req, res, next) => {
+  const {id} = req.params
+  User.findByIdAndDelete(id)
+    .then(user => {
+      res.redirect('/ih/profiles')
+    }) 
+    .catch(err => {
+      console.log(err)
+    })
 })
 
 module.exports = router

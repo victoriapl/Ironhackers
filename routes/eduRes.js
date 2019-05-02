@@ -80,14 +80,11 @@ router.get('/deleteExtraRes/:id', (req, res, next) => {
   const { id } = req.params
   const extraRes = req.query.q
   const { extraResources } = req.body
-  console.log(id, req.query)
   EduRes.findByIdAndUpdate(id, {$pull: {extraResources: extraRes }}, {new: true})
     .then(info => {
       res.redirect(`/extraRes/${id}`)
     }) 
-    .catch(err => {
-      console.log(err)
-    })
+    .catch(err => res.send(err))
 })
 
 module.exports = router
