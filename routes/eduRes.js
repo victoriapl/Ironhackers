@@ -41,14 +41,11 @@ router.get('/learnings/:id', isLogged, (req, res, next) => {
 router.get('/extraRes/:id', isLogged, (req, res, next) => {
   const { id } = req.params
   const userID = req.user._id
-  let issadmin = req.user.role
+  let admin = req.user.role === 'ADMIN'
   EduRes.findById(id)
     .then(({_doc: info}) => {
-      if(issadmin == 'ADMIN'){
-        issadmin = true
-      }
       info.userID = userID
-      const data = {...info, admin: issadmin }
+      const data = {...info, admin, extraId: id }
       res.render('eduRes/extraRes', data)
     })
     .catch(err => {
@@ -76,6 +73,20 @@ router.post('/newExtraRes/:id', (req, res, next) => {
     }) 
     .catch(err => {
       res.send(err)
+    })
+})
+
+router.get('/deleteExtraRes/:id', (req, res, next) => {
+  const { id } = req.params
+  const extraRes = req.query.q
+  const { extraResources } = req.body
+  console.log(id, req.query)
+  EduRes.findByIdAndUpdate(id, {$pull: {extraResources: extraRes }}, {new: true})
+    .then(info => {
+      res.redirect(`/extraRes/${id}`)
+    }) 
+    .catch(err => {
+      console.log(err)
     })
 })
 

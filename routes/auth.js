@@ -9,7 +9,6 @@ router.get("/signup", (req, res, next) => {
 });
 
 router.get("/login", (req, res, next) => {
-  //if(isLogged) return res.redirect(`/editProfile/${user._id}`)
   res.render("auth/login")
 });
 

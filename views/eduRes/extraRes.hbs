@@ -25,8 +25,8 @@
   <a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="{{this}}">{{this}}</a>
   <a  href="/eduRes/{{tag._id}}">{{tag.name}}</a>
   
-{{#if ../admin}}
-  <a class="text-center" href="/admin/deleteExtraRes">Delete resource</a>
+{{#if @root.admin}}
+  <a class="text-center" href="/deleteExtraRes/{{@root.extraId}}/?q={{this}}">Delete resource</a>
 {{/if}}
 </ul>
 
@@ -37,6 +37,8 @@
 <a class="btn btn-light" href="/profile/{{userID}}" role="button">Back to profile</a>
   </div>
 </div>
+
+
 
 
 
