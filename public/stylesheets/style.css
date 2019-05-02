@@ -105,9 +105,8 @@ img {
   align-content: center;
   margin: .5vh 0 0 0; }
 
-.profileLogout {
-  color: white;
-  font-family: Yanone Kaffeesatz; }
+.navButtons {
+  color: white; }
 
 #profileUsername {
   font-family: Yanone Kaffeesatz;
