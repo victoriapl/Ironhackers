@@ -9,11 +9,39 @@
 
 {{!-- ////////////////////////////////////////////////////////////// --}}
 
+<div class="card">
+  {{!-- title --}}
+<div class="card-header d-flex flex-column justify-content-center">
+  <br>
+<h2 class="text-center">ADD A NEW EXTRA RESOURCE</h2>
+
+  <div class="card-body d-flex justify-content-center">
+
+{{!-- body --}}
+<div class="card-body d-flex flex-column">
 
 
-<h2>ADD A NEW EXTRA RESOURCE</h2>
+<div class="card-body d-flex justify-content-center">
+<div class="card text-center mb-5" style="width: 40rem;">
+  <div class="card-body">
 <form action="/newExtraRes/{{_id}}" method="POST">
+
+<label>Descripction: </label>
+<input type="text" name="extraResources"><br>
 <label>Resource Link:</label>
-<input type="text" name="extraResources">
-<input type="submit" value="ADD">
+<input type="text" name="extraResources"> <br>
+<input class="btn btn-light" role="button" type="submit" value="ADD">
 </form>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+  
+  </div>
+</div>
+
+

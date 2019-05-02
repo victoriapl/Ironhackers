@@ -10,12 +10,30 @@
 {{!-- ////////////////////////////////////////////////////////////// --}}
 
 
+<div class="card">
+  {{!-- title --}}
+<div class="card-header d-flex flex-column justify-content-center">
+<h1 class="text-center">{{info.name}}</h1>
 
-<h1>{{info.name}}</h1>
-<a href="/profile/{{info.userID}}">Go back to your profile</a> <br>
+{{!-- body --}}
+<div class="card-body d-flex flex-column">
 
 
-<a style="font-size: 25px;" href="/learnings/{{info._id}}">LEARNINGS</a>
-<a style="font-size: 25px;" href="/extraRes/{{info._id}}">EXTRA RESOURCES</a><br>
-<a style="font-size: 25px;" href="/newExtraRes/{{info._id}}">ADD AN EXTRA RESOURCE</a>
+<ul class="card border-info">
+<a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="/learnings/{{info._id}}">LEARNINGS</a>
+<a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="/extraRes/{{info._id}}">EXTRA RESOURCES</a>
+<a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="/newExtraRes/{{info._id}}">ADD AN EXTRA RESOURCE</a>
+</ul>
+
+
+</div>
+</div>
+  </div>
+  <div class="card-footer text-muted">
+<a class="btn btn-light" href="/profile/{{info.userID}}" role="button">Back to profile</a>
+  </div>
+  
+</div>
+
+
 

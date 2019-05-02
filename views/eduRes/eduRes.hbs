@@ -9,18 +9,30 @@
 
 {{!-- ////////////////////////////////////////////////////////////// --}}
 
+<div class="card">
+<div class="card-header d-flex flex-column justify-content-center">
+<h2 class="text-center">EDUCATIVE RESOURCES</h2>
 
+{{!-- body --}}
+<div class="card-body d-flex flex-column">
 
-<h2>EDUCATIVE RESOURCES</h2>
-<a href="/profile/{{eduRes.userID}}">Go back to your profile</a>
 
 {{#each eduRes as |tag|}}
-<ul class="list-group">
+<ul class="card border-info">
+    <a class="list-group-item list-group-item-action list-group-item-light text-center" style="font-size: 1.5rem;" href="/eduRes/{{tag._id}}">{{tag.name}}</a>
+</ul>
 
-  <li class="list-group-item">
-    <a href="/eduRes/{{tag._id}}">{{tag.name}}</a>
-    </li>
 
 </ul>
 {{/each}}
+
+</div>
+</div>
+  </div>
+  <div class="card-footer text-muted">
+<a class="btn btn-light" href="/profile/{{eduRes.userID}}" role="button">Back to profile</a>
+  </div>
+  
+</div>
+
 
