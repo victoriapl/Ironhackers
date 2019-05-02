@@ -18,9 +18,6 @@ const userSchema = new Schema(
     facebook: String,
     codewars: String,
     instagram: String,
-    project1: String,
-    project2: String,
-    project3: String,
     email: {
       type: String,
       unique: true
@@ -29,14 +26,6 @@ const userSchema = new Schema(
       type: String,
       enum: ["STUDENT", "TEACHER", "ADMIN"],
       default: "STUDENT"
-    },
-    status: {
-      type: String,
-      enum: ["Active", "Pending Confirmation"],
-      default: "Pending Confirmation"
-    },
-    confirmationCode: {
-      type: String
     }
   },
   {

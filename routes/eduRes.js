@@ -1,7 +1,6 @@
-const router = require("express").Router();
+const router = require('express').Router()
 const { isLogged } = require('../handlers/middlewares')
 const EduRes = require('../models/EduRes')
-const User = require('../models/User')
 
 router.get('/eduRes', isLogged, (req, res, next) => {
   const userID = req.user._id
@@ -20,9 +19,7 @@ router.get('/eduRes/:id', isLogged, (req, res, next) => {
       info.userID = userID
       res.render('eduRes/oneEduRes', {info})
     })
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.get('/learnings/:id', isLogged, (req, res, next) => {
@@ -33,9 +30,7 @@ router.get('/learnings/:id', isLogged, (req, res, next) => {
       info.userID = userID
       res.render('eduRes/learnings', info)
     })
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.get('/extraRes/:id', isLogged, (req, res, next) => {
@@ -48,9 +43,7 @@ router.get('/extraRes/:id', isLogged, (req, res, next) => {
       const data = {...info, admin, extraId: id }
       res.render('eduRes/extraRes', data)
     })
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.get('/newExtraRes/:id', isLogged, (req, res, next) => {
@@ -59,9 +52,7 @@ router.get('/newExtraRes/:id', isLogged, (req, res, next) => {
     .then(info => {
       res.render('eduRes/newExtraRes', info)
     })
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.post('/newExtraRes/:id', (req, res, next) => {
@@ -71,9 +62,7 @@ router.post('/newExtraRes/:id', (req, res, next) => {
     .then(info => {
       res.redirect(`/extraRes/${info._id}`)
     }) 
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.get('/deleteExtraRes/:id', (req, res, next) => {

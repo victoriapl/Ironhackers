@@ -40,9 +40,7 @@ router.get('/deletePost/:id', (req, res, next) => {
     .then(post => {
       res.redirect('/agora')
     }) 
-    .catch(err => {
-      console.log(err)
-    })
+    .catch(err => res.send(err))
 })
 
 

@@ -1,15 +1,11 @@
-const router = require("express").Router();
+const router = require('express').Router()
 const passport = require('../handlers/passport')
 const User = require('../models/User')
 const Email = require('../models/Email')
 
-router.get("/signup", (req, res, next) => {
-  res.render("auth/signup")
-});
+router.get('/signup', (req, res, next) => res.render('auth/signup'))
 
-router.get("/login", (req, res, next) => {
-  res.render("auth/login")
-});
+router.get('/login', (req, res, next) => res.render('auth/login'))
 
 router.post('/signup', (req, res, next) => {
   Email.findOne({email: req.body.email})
@@ -20,9 +16,9 @@ router.post('/signup', (req, res, next) => {
       .then(()=>{
         res.redirect('/auth/login')
       })
-      .catch(err => console.log(err))    
+      .catch(err => res.send(err))    
   })
-  .catch(err => console.log('You are not an ironhacker'))
+  .catch(err => res.send('You are not an ironhacker'))
 })
 
 router.post('/login', (req, res, next) => { 
@@ -34,7 +30,6 @@ router.post('/login', (req, res, next) => {
       const { user } = req
       req.app.locals.loggedUser = user
       if (req.user.role == 'ADMIN') return res.redirect(`/profile/${user._id}`)
-      console.log(req.user.role)
       if (user.username === '') return res.redirect(`/editProfile/${user._id}`) 
       return res.redirect(`/profile/${user._id}`)  
     })
@@ -48,4 +43,4 @@ router.get('/logout', (req, res, next) => {
   res.redirect('/auth/login')
 })
 
-module.exports = router;
+module.exports = router

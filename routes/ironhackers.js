@@ -19,9 +19,7 @@ router.get('/deleteProfile/:id', (req, res, next) => {
     .then(user => {
       res.redirect('/ih/profiles')
     }) 
-    .catch(err => {
-      console.log(err)
-    })
+    .catch(err => res.send(err))
 })
 
 module.exports = router

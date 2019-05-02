@@ -1,11 +1,11 @@
-const router = require("express").Router();
+const router = require('express').Router()
 const User = require('../models/User')
 const uploadCloud = require('../handlers/cloudinary')
 const {isLogged} = require('../handlers/middlewares')
 
 router.get('/', (req, res, next) => {
-  res.render('index');
-});
+  res.render('index')
+})
 
 router.get('/editProfile/:id', isLogged, (req, res, next) => {
   const { id } = req.params
@@ -13,9 +13,7 @@ router.get('/editProfile/:id', isLogged, (req, res, next) => {
     .then(user => {
       res.render('editProfile', {user})
     })
-    .catch(err => {
-      console.log(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.post('/editProfile/:id', isLogged, uploadCloud.single('profileImg'), (req, res, next) => {
@@ -32,7 +30,6 @@ router.post('/editProfile/:id', isLogged, uploadCloud.single('profileImg'), (req
 router.get('/profile/:id', isLogged, (req, res, next) => {
   const { id } = req.params
   const userID = req.user._id
-  console.log(id)
   let editPermision = false
   let admin = false
   User.findById(id)
@@ -47,9 +44,7 @@ router.get('/profile/:id', isLogged, (req, res, next) => {
      user.editPermision = editPermision
      res.render('profile', {user})
     })
-    .catch(err => {
-      res.send(err)
-    })
+    .catch(err => res.send(err))
 })
 
 router.get('/:id/delete', isLogged, (req, res, next) => {
