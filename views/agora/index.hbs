@@ -1,32 +1,35 @@
 <header>
   <nav>
     <ul>
-      <li class="menu"><a href="/profile/{{posts.userID}}" class="profileLogout" style="font-size: 1.3rem;">PROFILE</a></li>
+         <li class="menu"><a href="/profile/{{posts.id}}" class="profileLogout" style="font-size: 1.3rem;">PROFILE</a></li>
       <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 3vh;"></li>
       <li class="menu"><a href="/auth/logout" class="profileLogout" style="font-size: 1.3rem;">LOGOUT</a></li>
     </ul>
   </nav>
 </header>
-<h1  style="font-size: 25px; margin-left: 45.5%; margin-top: 2%;">AGORA</h1><br>
+<h1  style="font-size: 25px; margin-top: 2%;" class="text-center">AGORA</h1><br>
 <h5 style="font-weight:200; text-align:justify; margin: 0% 10%;">Wellcome to the Agora Space, in this place you can post your doubts, curiosities or anything related with the world of programming. Our rules are not strict, but respect is essential. You make agora a better place, have fun!</h5>
-
-<a href="/agora/post" style="font-weight:200; margin: 0% 10%;">ADD A NEW POST</a>
+<hr>
+<a href="/agora/post" style="font-weight:200; margin-left: 45.5%;">ADD A NEW POST</a>
 
 {{#each posts as |post|}}
 <div class="card" style="margin: 2% 20%;">
   <div class="card-header" style="display:inline-block;">
-    <div style="float:left;">
-      <img src="{{post.userId.profileImg}}" width="6%"/>
-    </div>
-    <div style="float:right;">
-      <a href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
+    <div class="row">
+      <div class="col-sm-1">
+        <img style="border-radius: 10%;" src="{{post.userId.profileImg}}" width="100%"/>
+      </div>
+      <div class="col-sm-4">
+          <a style="font-weight:200;" href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
+      </div>
     </div>
   </div>
   <div class="card-body">
-  <img src="{{post.image}}" width="70%" style="margin-left:15%;"/>
+    <img src="{{post.image}}" width="70%" style="margin-left:15%;"/><br>
     <h4 class="card-title">{{post.title}}</h4>
     <p class="card-text">{{post.content}}</p>
   </div>
+</div>
 </div>
 {{/each}}
 
