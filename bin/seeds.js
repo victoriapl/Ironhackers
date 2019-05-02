@@ -81,13 +81,11 @@ let eduRes = [
 mongoose
 .connect(process.env.DB, {useNewUrlParser: true})
 .then(()=> {
-  Email.create(emails)
-  EduRes.create(eduRes)
-  console.log('Your database is working!')
+  Promise.all([Email.create(emails),   EduRes.create(eduRes)])
+  .then(() => {
+    console.log('Your database is working!')
+    mongoose.connection.close()
+  })
 })
 .catch(err => (console.log(err)))
-// .then(()=> {
-//   mongoose.connection.close()
-// })
-// .catch(err => console.log(err))
 

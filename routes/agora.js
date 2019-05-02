@@ -33,5 +33,4 @@ router.post('/post', uploadCloud.single('image'), isLogged, (req, res, next) => 
 })
 
 
-
 module.exports = router

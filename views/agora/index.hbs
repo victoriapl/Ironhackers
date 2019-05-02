@@ -22,6 +22,9 @@
       <div class="col-sm-4">
           <a style="font-weight:200;" href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
       </div>
+      {{#if ./admin}}
+      <a href="/admin/deletePost">Delete resource</a>
+      {{/if}}
     </div>
   </div>
   <div class="card-body">
