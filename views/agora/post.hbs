@@ -2,26 +2,20 @@
   <nav>
     <ul>
       <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 3vh;"></li>
-      <li class="menu"><a href="/auth/logout" class="profileLogout" style="font-size: 2rem;">LOGOUT</a></li>
+      <li class="menu"><a href="/auth/logout" class="profileLogout" style="font-size: 1.3rem;">LOGOUT</a></li>
     </ul>
   </nav>
 </header>
 
-{{!-- ////////////////////////////////////////////////////////////// --}}
-
-
-
-
-<h2>Add a new post</h2>
-
-<form action="/agora/post" method="POST" enctype="multipart/form-data">
-<label>Title</label>
-<input type="text" name="title"><br>
-<label>Content</label>
-<input type="text" name="content"><br>
-<label>Image</label>
-<input type="file" name="image"/>
-<input type="submit" value="Create">
-</form>
-
-<a href="/profile/{{post.userID}}">Go back to your profile</a>
+<h3 style="font-weight:300; margin-top: 2%;" class="text-center">ADD A NEW POST</h3>
+<div style="text-align:center;">
+  <form action="/agora/post" method="POST" enctype="multipart/form-data">
+  <label style="color:#257ab9; font-size:20px;">Title</label><br>
+  <input style="width: 30%;" type="text" name="title"><br>
+  <label style="color:#257ab9; font-size:20px;">Content</label><br>
+  <textarea name="content" cols="60" rows="10"></textarea><br>
+  <label style="color:#257ab9; font-size:20px;">Image</label><br>
+  <input type="file" name="image"/><br>
+  <input style="margin-top:2%;" type="submit" value="Create">
+  </form>
+</div>
