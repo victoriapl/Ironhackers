@@ -41,10 +41,15 @@ router.get('/learnings/:id', isLogged, (req, res, next) => {
 router.get('/extraRes/:id', isLogged, (req, res, next) => {
   const { id } = req.params
   const userID = req.user._id
+  let issadmin = req.user.role
   EduRes.findById(id)
-    .then(info => {
+    .then(({_doc: info}) => {
+      if(issadmin == 'ADMIN'){
+        issadmin = true
+      }
       info.userID = userID
-      res.render('eduRes/extraRes', info)
+      const data = {...info, admin: issadmin }
+      res.render('eduRes/extraRes', data)
     })
     .catch(err => {
       res.send(err)

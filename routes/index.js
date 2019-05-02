@@ -47,17 +47,32 @@ router.get('/profile/:id', isLogged, (req, res, next) => {
   const userID = req.user._id
   console.log(id)
   let editPermision = false
+  let admin = false
   User.findById(id)
     .then(user => {
       if(userID == id){ 
         editPermision = true
      }  
+     if(req.user.role == 'ADMIN'){
+       admin = true
+     }
+     user.admin = admin
      user.editPermision = editPermision
      res.render('profile', {user})
     })
     .catch(err => {
       res.send(err)
     })
+})
+
+router.get('/:id/delete', isLogged, (req, res, next) => {
+  const { id } = req.params
+  User.findByIdAndRemove(id)
+  .then((user) => {
+    user.id = id
+    res.redirect('/auth/signup')
+  })
+  .catch(err => res.send(err))
 })
 
 module.exports = router
