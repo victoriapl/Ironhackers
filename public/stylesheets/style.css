@@ -89,7 +89,11 @@
 nav {
   width: 100vw;
   height: 7vh;
-  background: grey; }
+  background: #32c3ff; }
+
+.navColorDiv {
+  height: 5px;
+  background-color: #257ab9; }
 
 ul {
   display: flex;
@@ -106,37 +110,71 @@ img {
   align-content: center;
   margin: .5vh 0 0 0; }
 
-.profileLogout {
-  color: white;
-  font-family: Yanone Kaffeesatz; }
+.navButtons {
+  color: white; }
+
+.p-gridContainer {
+  display: grid;
+  grid-template-columns: .8fr .2fr 1.5fr;
+  grid-gap: 1px;
+  padding: 0 0px 0 10px;
+  position: absolute;
+  top: 7.5vh;
+  bottom: 0; }
 
 #profileUsername {
-  font-family: Yanone Kaffeesatz;
-  margin: 0 3% 7% 10%;
-  font-size: 2.1rem;
-  text-align: center; }
+  font-family: Yanone Kaffeesatz; }
 
 .profileContainer {
-  margin-top: 1%;
-  width: 25vw; }
+  display: grid;
+  padding: 1px;
+  align-content: center;
+  grid-template-rows: 2fr 2fr 1fr;
+  grid-gap: 10px; }
 
-.dataContent {
-  text-align: center;
-  width: 15vw;
-  height: 25vh;
-  margin: 0 3% 0 10%; }
+/* .buttonsBox{
+  display: grid;
+  align-content: center;
+} */
+.profileButton {
+  width: 6vw;
+  display: grid;
+  align-content: center;
+  padding: 1fr; }
+
+.box {
+  display: grid;
+  align-content: center;
+  padding: 1fr;
+  text-align: center; }
 
 .socialMedia {
-  width: 5vw;
-  height: 90vh; }
+  display: grid;
+  padding: 10px;
+  align-content: center;
+  width: 4vw; }
+
+.smButtons {
+  display: grid;
+  padding: 1px;
+  grid-gap: 5px;
+  grid-auto-rows: 1fr;
+  align-content: center; }
+
+.circleButton {
+  display: grid;
+  align-content: center; }
 
 .smLogos {
-  padding-top: 5%;
-  margin: 7% 1% 5% 15%;
-  width: 59%; }
+  width: 100%; }
 
-.tableP {
-  margin: 10% 10% 10% 10%; }
+.pf-menu {
+  display: grid;
+  width: 70vw;
+  align-content: center;
+  background: pink;
+  grid-gap: 10px;
+  padding: 10px; }
 
 .editContainer {
   display: flex;
@@ -148,51 +186,20 @@ img {
   border: 1px solid grey;
   border-radius: 3%; }
 
-.pGrid {
-  width: 100%;
-  display: table;
-  border-collapse: separate;
-  border-spacing: 15px; }
-
-#profileGrid {
-  width: 90%;
-  height: 70%;
-  margin: 5% 1% 3% 1%;
-  font-family: Yanone Kaffeesatz;
-  font-size: 2rem;
-  text-align: center; }
-
-.grid-row {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-  margin: 0 0 -15px 0; }
-
-.pItem {
-  border-radius: 4%;
-  display: table-cell;
-  background: grey;
-  padding: 2%; }
-
-.gridText {
-  color: white;
-  text-align: center; }
-
 .hex {
   width: 150px;
   height: 86px;
-  background-color: #ccc;
+  background-color: #c8c8c8;
   background-repeat: repeat;
   background-position: 50% 50%;
   background-size: 200px;
   position: relative;
-  float: center;
-  margin: 40% 5% 35% 10%;
+  margin: 20% 1% 20% 25%;
   text-align: center;
-  zoom: 1.4; }
+  zoom: 1.5; }
 
 .hex.hex-gap {
-  margin-left: 86px; }
+  margin-left: 1px; }
 
 .hex .corner-1,
 .hex .corner-2 {

@@ -6,6 +6,7 @@
       <li class="menu"><a href="/auth/logout" class="profileLogout" style="font-size: 1.3rem;">LOGOUT</a></li>
     </ul>
   </nav>
+    <div class="navColorDiv"></div>
 </header>
 
 {{!-- ////////////////////////////////////////////////////////////// --}}
@@ -25,10 +26,10 @@
 <br>
 
 {{#each users as |user|}}
-<div class="card text-center border-info profileCard" style="width: 17rem; height:30rem; min-width:17rem; min-height:25rem; max-width: 20rem;  max-height:30rem; margin: 4% 0 0 0;">
+<div class="card text-center border-info profileCard" style="width: 25rem; height:30rem; min-width:25rem; min-height:25rem; max-width: 20rem;  max-height:30rem; margin: 4% 0 0 0;">
 
 {{!-- img --}}
-<div class="card">
+<div class="card d-flex justify-content-center">
   <div class="hex" style="background-image: url({{user.profileImg}});">
     <div class="corner-1"></div>
     <div class="corner-2"></div>
