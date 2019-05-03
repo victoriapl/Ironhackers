@@ -1,29 +1,29 @@
 <header>
   <nav>
     <ul>
-         <li class="menu"><a href="/profile/{{posts.id}}" class="navButtons" style="font-size: 1.3rem;">PROFILE</a></li>
-      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 3vh;"></li>
-      <li class="menu"><a href="/auth/logout" class="navButtons" style="font-size: 1.3rem;">LOGOUT</a></li>
+         <li class="menu"><a href="/profile/{{posts.id}}" class="navButtons" id="agora__index__li__profile">PROFILE</a></li>
+      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" id="agora__index__li__ironhack"></li>
+      <li class="menu"><a href="/auth/logout" class="navButtons" id="agora__index__li__profile">LOGOUT</a></li>
     </ul>
   </nav>
     <div class="navColorDiv"></div>
 </header>
 
 </header>
-<h1  style="font-size: 25px; margin-top: 2%;" class="text-center">AGORA</h1><br>
-<h5 style="font-weight:200; text-align:justify; margin: 0% 10%;">Wellcome to the Agora Space, in this place you can post your doubts, curiosities or anything related with the world of programming. Our rules are not strict, but respect is essential. You make agora a better place, have fun!</h5>
+<h1  id="agora__h1" class="text-center">AGORA</h1><br>
+<h5 id="agora__h5">Wellcome to the Agora Space, in this place you can post your doubts, curiosities or anything related with the world of programming. Our rules are not strict, but respect is essential. You make agora a better place, have fun!</h5>
 <hr>
-<a href="/agora/post" style="font-weight:200; margin-left: 45.5%;">ADD A NEW POST</a>
+<a href="/agora/post" id="agora__new_post">ADD A NEW POST</a>
 
 {{#each posts as |post|}}
-<div class="card" style="margin: 2% 20%;">
-  <div class="card-header" style="display:inline-block;">
+<div class="card" id="agora__div__post1">
+  <div class="card-header" id="agora__div__post2">
     <div class="row">
       <div class="col-sm-1">
-        <img style="border-radius: 10%;" src="{{post.userId.profileImg}}" width="100%"/>
+        <img id="agora__img__profile" src="{{post.userId.profileImg}}" width="100%"/>
       </div>
       <div class="col-sm-4">
-          <a style="font-weight:200;" href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
+          <a id="agora__a__username" href="/profile/{{post.userId._id}}">{{post.userId.username}}</a>
       </div>
      {{#if @root.admin}}
       <a class="text-center" href="/agora/deletePost/{{post._id}}">Delete post</a>
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="card-body">
-    <img src="{{post.image}}" width="40%" style="margin-left:30%;"/><br>
+    <img src="{{post.image}}" width="40%" is="agora__img__post"/><br>
     <h4 class="card-title">{{post.title}}</h4>
     <p class="card-text">{{post.content}}</p>
   </div>

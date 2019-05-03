@@ -1,23 +1,23 @@
 <header>
   <nav>
     <ul>
-      <li class="menu"><a href="" class="navButtons" style="font-size: 1.3rem;">PROFILE</a></li>
-      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" style="height: 3vh;"></li>
-      <li class="menu"><a href="/auth/logout" class="navButtons" style="font-size: 1.3rem;">LOGOUT</a></li>
+      <li class="menu"><a href="" class="navButtons" id="agora__index__li__profile">PROFILE</a></li>
+      <li class="menu"><img src="https://dl.dropboxusercontent.com/s/7hy1qof7mdsgt6y/logoProfiles.png?dl=0" alt="Ironhack" id="agora__index__li__ironhack"></li>
+      <li class="menu"><a href="/auth/logout" class="navButtons" id="agora__index__li__profile">LOGOUT</a></li>
     </ul>
   </nav>
     <div class="navColorDiv"></div>
 </header>
 
-<h3 style="font-weight:300; margin-top: 2%;" class="text-center">ADD A NEW POST</h3>
-<div style="text-align:center;">
+<h3 id="post__h3__addpost" class="text-center">ADD A NEW POST</h3>
+<div id="post__div3">
   <form action="/agora/post" method="POST" enctype="multipart/form-data">
-  <label style="color:#257ab9; font-size:20px;">Title</label><br>
-  <input style="width: 30%;" type="text" name="title"><br>
-  <label style="color:#257ab9; font-size:20px;">Content</label><br>
+  <label id="post__label__title">Title</label><br>
+  <input id="post__input__title" type="text" name="title"><br>
+  <label id="post__label__title">Content</label><br>
   <textarea name="content" cols="60" rows="10"></textarea><br>
-  <label style="color:#257ab9; font-size:20px;">Image</label><br>
+  <label id="post__label__title">Image</label><br>
   <input type="file" name="image"/><br>
-  <input style="margin-top:2%;" type="submit" value="Create">
+  <input id="post__input__create" type="submit" value="Create">
   </form>
 </div>
