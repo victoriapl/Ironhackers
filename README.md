@@ -1,6 +1,6 @@
 # Ironhackers
 
-[Ironhacker Platform](https://enigmatic-hamlet-57213.herokuapp.com/)
+[Ironhackers Platform](https://enigmatic-hamlet-57213.herokuapp.com/)
 
 This is a platform proposal that intends to complement all the educative resources and optimize the socialization between all the Ironhackers.
 
