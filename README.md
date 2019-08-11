@@ -40,34 +40,8 @@ By giving each Ironhack a profile within an internal social network, it becomes 
 
 ---
 
+![](https://i.imgur.com/Vdc4dT4.png)
 
-```graphviz
-digraph {
-  compound=true
-  rankdir=RL
-
-  graph [ fontname="Source Sans Pro", fontsize=20 ];
-  node [ fontname="Source Sans Pro", fontsize=18];
-  edge [ fontname="Source Sans Pro", fontsize=12 ];
-
-
-  subgraph core {
-    c [label="   Students and graduates  "] [shape=box]
-  }
-  
-  c -> sync [ltail=session lhead=session]
-
-  subgraph cluster1 {
-     concentrate=true
-    a [label="   School resources   "] [shape=box]
-    b [label=" Extra resources "] [shape=box]
-    sync [label="sync" shape=plaintext ]
-    b -> sync  [dir="both"]
-    sync -> a [dir="both"]
-    label="Ironhackers                         "
-  }
-}
-```
 Ironhackers is intended to keep students and graduates in constant communication as well as give them access to the constant change of technology.
 
 This is achieved by linking the "Ironhack's learnings" with extra resources, giving the opportunity to improve the training of the Ironhackers.
