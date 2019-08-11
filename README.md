@@ -29,7 +29,7 @@ To activate your account in this private social media, you have to be registered
 
 ---
 
-{%youtube 26EreqlLClI %}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/26EreqlLClI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 By giving each Ironhack a profile within an internal social network, it becomes possible to centralize all the necessary tools for the community, such as a communication space, called *Agora*, educative resources, and a list of all Ironhackers with a view of their profiles so that they can be in touch. 
