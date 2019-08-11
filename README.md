@@ -10,12 +10,12 @@ You can check it out [HERE!!!](https://enigmatic-hamlet-57213.herokuapp.com/) :p
 
 ## What is Ironhackers?
 
-This is a *platform proposal* that intends to complement all the educative resources and optimize the socialization.
+This is a *platform proposal* that intends to compelement all the educative resources and optimize the socialization.
 
 ---
 
 ### ![](https://i.imgur.com/cCiNST6.png)For **Ironhackers** only
-It have been developed to be use **only by Ironhackers**, and it's really simple and easy to use.
+It has been developed to be used **only by Ironhackers**, and it's really simple and easy to use.
 
 To activate your account in this private social media, you have to be registered before in the students database from Ironhack.
 
