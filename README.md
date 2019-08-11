@@ -17,7 +17,7 @@ This is a *platform proposal* that intends to compelement all the educative reso
 ### ![](https://i.imgur.com/cCiNST6.png)For **Ironhackers** only
 It has been developed to be used **only by Ironhackers**, and it's really simple and easy to use.
 
-To activate your account in this private social media, you have to be registered before in the students database from Ironhack.
+To activate your account in this private social media, you have to be registered in the Ironhack's students database.
 
 ---
 
