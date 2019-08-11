@@ -1,6 +1,6 @@
 # Ironhackers
 
-You can check it out [here!!!](https://enigmatic-hamlet-57213.herokuapp.com/) :paw_prints: ![](https://i.imgur.com/ILwWt55.png) :paw_prints:
+You can check it out [here!!!](https://enigmatic-hamlet-57213.herokuapp.com/) :paw_prints:
 
 
 ---
