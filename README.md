@@ -10,7 +10,7 @@ You can check it out [here!!!](https://enigmatic-hamlet-57213.herokuapp.com/) :p
 
 ## What is Ironhackers?
 
-This is a *platform proposal* that intends to complement all the educative resources and optimize the socialization between all the Ironhackers.
+This is a *platform proposal* that intends to complement all the educative resources and optimize the socialization.
 
 ---
 
