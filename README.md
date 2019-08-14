@@ -4,7 +4,7 @@ You can check it out [HERE!!!](https://enigmatic-hamlet-57213.herokuapp.com/) :p
 
 
 ---
-![](https://i.imgur.com/ok0QRdc.png)
+![](https://i.imgur.com/51H8iw1.png)
 
 ---
 
@@ -40,7 +40,7 @@ By giving each Ironhack a profile within an internal social network, it becomes 
 
 ---
 
-![](https://i.imgur.com/Vdc4dT4.png)
+![](https://i.imgur.com/IhdeZ6V.png)
 
 Ironhackers is intended to keep students and graduates in constant communication as well as give them access to the constant change of technology.
 
