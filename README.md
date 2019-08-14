@@ -20,7 +20,7 @@ It has been developed to be used **only by Ironhackers**, and it's really simple
 To activate your account in this private social media, you have to be registered in the Ironhack's students database.
 
 ---
-![](https://i.imgur.com/mR1C7AV.png)
+![](https://i.imgur.com/J3EyJyQ.png)
 
 ---
 
