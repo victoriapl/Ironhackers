@@ -21,7 +21,7 @@ To activate your account in this private social media, you have to be registered
 
 ---
 
-![](https://i.imgur.com/SrpPbTn.png)
+![](https://i.imgur.com/cre4Bhs.png)
 
 ---
 
