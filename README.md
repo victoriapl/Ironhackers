@@ -39,7 +39,7 @@ By giving each Ironhack a profile within an internal social network, it becomes 
 
 ---
 
-![](https://i.imgur.com/IhdeZ6V.png)
+![](https://i.imgur.com/6iNkvSq.png)
 
 Ironhackers is intended to keep students and graduates in constant communication as well as give them access to the constant change of technology.
 
