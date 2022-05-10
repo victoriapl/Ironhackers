@@ -28,7 +28,7 @@ To activate your account in this private social media, you have to be registered
 
 ---
 
-> Click to watch [video of the app](https://youtu.be/26EreqlLClI):
+> Click to watch [video of the app](https://youtu.be/-JZy6QKfYso):
 [![](https://i.imgur.com/5F7ozKY.png)](https://youtu.be/26EreqlLClI)
 
 By giving each Ironhack a profile within an internal social network, it becomes possible to centralize all the necessary tools for the community, such as a communication space, called *Agora*, educative resources, and a list of all Ironhackers with a view of their profiles so that they can be in touch. 
